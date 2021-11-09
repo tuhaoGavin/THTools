@@ -14,17 +14,42 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - Masonry (1.1.0)
+  - THTools (0.0.1):
+    - THTools/Base (= 0.0.1)
+    - THTools/Category (= 0.0.1)
+    - THTools/Macro (= 0.0.1)
+    - THTools/Networking (= 0.0.1)
+    - THTools/Notification (= 0.0.1)
+    - THTools/Settings (= 0.0.1)
+    - THTools/Utilities (= 0.0.1)
+  - THTools/Base (0.0.1)
+  - THTools/Category (0.0.1)
+  - THTools/Macro (0.0.1)
+  - THTools/Networking (0.0.1):
+    - AFNetworking (~> 4.0)
+  - THTools/Notification (0.0.1)
+  - THTools/Settings (0.0.1):
+    - Masonry
+  - THTools/Utilities (0.0.1)
 
 DEPENDENCIES:
-  - AFNetworking (~> 4.0)
+  - THTools (from `../`)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
+    - Masonry
+
+EXTERNAL SOURCES:
+  THTools:
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  THTools: 26d106fff2809cdd695c9b08b60a52620af5f244
 
-PODFILE CHECKSUM: 906c6efb941f27c470d8074b356af956a24df0c1
+PODFILE CHECKSUM: 1ac52a1650c62887f7ae94e17bc4db36c4f1ddf7
 
 COCOAPODS: 1.11.2

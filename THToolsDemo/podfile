@@ -6,8 +6,6 @@ inhibit_all_warnings!
 
 target 'THToolsDemo' do
 
-pod 'AFNetworking', '~> 4.0'
-
 pod 'THTools', :path => '../'
 
 end

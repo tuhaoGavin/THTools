@@ -58,11 +58,11 @@ static NSInteger const KRedPointTag = 88999;
         Class clazz = NSClassFromString(identity);
         cell = [[clazz alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identity];
     }
-//    cell.accessoryType = tableRow.showAccessory ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+    cell.accessoryType = tableRow.showAccessory ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
     //THHT
-    if (!cell.accessoryView) {
-        cell.accessoryView = tableRow.showAccessory ? [[UIImageView alloc] initWithImage:YQImage(@"icon_arrow")] : nil;
-    }
+//    if (!cell.accessoryView) {
+//        cell.accessoryView = tableRow.showAccessory ? [[UIImageView alloc] initWithImage:YQImage(@"icon_arrow")] : nil;
+//    }
     
     
     if (![cell respondsToSelector:@selector(refreshData:tableView:indexPath:)]) {
