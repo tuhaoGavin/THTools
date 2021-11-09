@@ -1,0 +1,14 @@
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+platform :ios, '10.0'
+
+# 忽略引入库的所有警告
+inhibit_all_warnings!
+
+target 'THToolsDemo' do
+
+pod 'AFNetworking', '~> 4.0'
+
+pod 'THTools', :path => '../'
+
+end
+

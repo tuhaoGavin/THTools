@@ -8,20 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		11E7D2E2272AA62D00EB8F57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7D2E1272AA62D00EB8F57 /* AppDelegate.m */; };
-		11E7D2E5272AA62D00EB8F57 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7D2E4272AA62D00EB8F57 /* SceneDelegate.m */; };
 		11E7D2E8272AA62D00EB8F57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7D2E7272AA62D00EB8F57 /* ViewController.m */; };
 		11E7D2EB272AA62D00EB8F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E7D2E9272AA62D00EB8F57 /* Main.storyboard */; };
 		11E7D2ED272AA63800EB8F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E7D2EC272AA63800EB8F57 /* Assets.xcassets */; };
 		11E7D2F0272AA63800EB8F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E7D2EE272AA63800EB8F57 /* LaunchScreen.storyboard */; };
 		11E7D2F3272AA63800EB8F57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7D2F2272AA63800EB8F57 /* main.m */; };
+		215EC18782C3EFA3A9F63056 /* libPods-THToolsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3CA245ABEFBBB011111BB4 /* libPods-THToolsDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3CA245ABEFBBB011111BB4 /* libPods-THToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-THToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E7D2DD272AA62D00EB8F57 /* THToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E7D2E0272AA62D00EB8F57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11E7D2E1272AA62D00EB8F57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		11E7D2E3272AA62D00EB8F57 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		11E7D2E4272AA62D00EB8F57 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		11E7D2E6272AA62D00EB8F57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		11E7D2E7272AA62D00EB8F57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		11E7D2EA272AA62D00EB8F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +28,8 @@
 		11E7D2EF272AA63800EB8F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11E7D2F1272AA63800EB8F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11E7D2F2272AA63800EB8F57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A4DAE0981D1503340681EAE /* Pods-THToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THToolsDemo.debug.xcconfig"; path = "Target Support Files/Pods-THToolsDemo/Pods-THToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A7A68C52C0520B312271ECD2 /* Pods-THToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THToolsDemo.release.xcconfig"; path = "Target Support Files/Pods-THToolsDemo/Pods-THToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215EC18782C3EFA3A9F63056 /* libPods-THToolsDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1008AD68C74750BBA3ECED44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D3CA245ABEFBBB011111BB4 /* libPods-THToolsDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		11E7D2D4272AA62D00EB8F57 = {
 			isa = PBXGroup;
 			children = (
 				11E7D2DF272AA62D00EB8F57 /* THToolsDemo */,
 				11E7D2DE272AA62D00EB8F57 /* Products */,
+				F27113621B7ABE673C8EA150 /* Pods */,
+				1008AD68C74750BBA3ECED44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +75,6 @@
 			children = (
 				11E7D2E0272AA62D00EB8F57 /* AppDelegate.h */,
 				11E7D2E1272AA62D00EB8F57 /* AppDelegate.m */,
-				11E7D2E3272AA62D00EB8F57 /* SceneDelegate.h */,
-				11E7D2E4272AA62D00EB8F57 /* SceneDelegate.m */,
 				11E7D2E6272AA62D00EB8F57 /* ViewController.h */,
 				11E7D2E7272AA62D00EB8F57 /* ViewController.m */,
 				11E7D2E9272AA62D00EB8F57 /* Main.storyboard */,
@@ -76,6 +86,15 @@
 			path = THToolsDemo;
 			sourceTree = "<group>";
 		};
+		F27113621B7ABE673C8EA150 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A4DAE0981D1503340681EAE /* Pods-THToolsDemo.debug.xcconfig */,
+				A7A68C52C0520B312271ECD2 /* Pods-THToolsDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11E7D2F6272AA63800EB8F57 /* Build configuration list for PBXNativeTarget "THToolsDemo" */;
 			buildPhases = (
+				E4AC491EE4F3260FB5AADBC6 /* [CP] Check Pods Manifest.lock */,
 				11E7D2D9272AA62D00EB8F57 /* Sources */,
 				11E7D2DA272AA62D00EB8F57 /* Frameworks */,
 				11E7D2DB272AA62D00EB8F57 /* Resources */,
@@ -140,6 +160,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E4AC491EE4F3260FB5AADBC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-THToolsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11E7D2D9272AA62D00EB8F57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -148,7 +193,6 @@
 				11E7D2E8272AA62D00EB8F57 /* ViewController.m in Sources */,
 				11E7D2E2272AA62D00EB8F57 /* AppDelegate.m in Sources */,
 				11E7D2F3272AA63800EB8F57 /* main.m in Sources */,
-				11E7D2E5272AA62D00EB8F57 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +332,7 @@
 		};
 		11E7D2F7272AA63800EB8F57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4DAE0981D1503340681EAE /* Pods-THToolsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +351,7 @@
 		};
 		11E7D2F8272AA63800EB8F57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A68C52C0520B312271ECD2 /* Pods-THToolsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
