@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "THTools"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "OC常用工具"
 
   # This description is used to generate tags and improve search results.
@@ -99,6 +99,11 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'Base' do |ss|
   ss.source_files = 'THTools/Base/*'
+  end
+
+  spec.subspec 'Alert' do |ss|
+  ss.source_files = 'THTools/Alert/*.{h,m}'
+  ss.dependency 'Masonry'
   end
 
   spec.subspec 'Category' do |ss|

@@ -6,11 +6,11 @@
 //
 
 #import "ViewController.h"
-#import <YQSettings.h>
+#import <THSettings.h>
 #import <Masonry.h>
 
-@interface ViewController ()<YQSettingsTableViewDelegate>
-@property (nonatomic, strong) YQSettingsTableView * tableView;
+@interface ViewController ()<THSettingsTableViewDelegate>
+@property (nonatomic, strong) THSettingsTableView * tableView;
 
 @end
 
@@ -26,7 +26,7 @@
 }
 
 #pragma mark - YQSettingsTableViewDelegate
-- (NSArray *)dataWithTableView:(YQSettingsTableView *)tableView {
+- (NSArray *)dataWithTableView:(THSettingsTableView *)tableView {
     return @[
         @{
             HeaderHeight: @(10),
@@ -36,19 +36,21 @@
                     Title: @"黑名单列表",
                     TitleFont: @(14),
                     ShowAccessory: @(YES),
-                    CellAction: @"nl_blackListAction"
+                    CellAction: @"blackListAction"
                 }
             ]
         }
     ];
 }
 
-
+- (void)blackListAction {
+    NSLog(@"点击了黑名单列表");
+}
 
 #pragma mark - getter
-- (YQSettingsTableView *)tableView {
+- (THSettingsTableView *)tableView {
     if (!_tableView) {
-        _tableView = [[YQSettingsTableView alloc] init];
+        _tableView = [[THSettingsTableView alloc] init];
         _tableView.delegater = self;
     }
     return _tableView;

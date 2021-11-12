@@ -15,23 +15,26 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
-  - THTools (0.0.1):
-    - THTools/Base (= 0.0.1)
-    - THTools/Category (= 0.0.1)
-    - THTools/Macro (= 0.0.1)
-    - THTools/Networking (= 0.0.1)
-    - THTools/Notification (= 0.0.1)
-    - THTools/Settings (= 0.0.1)
-    - THTools/Utilities (= 0.0.1)
-  - THTools/Base (0.0.1)
-  - THTools/Category (0.0.1)
-  - THTools/Macro (0.0.1)
-  - THTools/Networking (0.0.1):
-    - AFNetworking (~> 4.0)
-  - THTools/Notification (0.0.1)
-  - THTools/Settings (0.0.1):
+  - THTools (0.0.2):
+    - THTools/Alert (= 0.0.2)
+    - THTools/Base (= 0.0.2)
+    - THTools/Category (= 0.0.2)
+    - THTools/Macro (= 0.0.2)
+    - THTools/Networking (= 0.0.2)
+    - THTools/Notification (= 0.0.2)
+    - THTools/Settings (= 0.0.2)
+    - THTools/Utilities (= 0.0.2)
+  - THTools/Alert (0.0.2):
     - Masonry
-  - THTools/Utilities (0.0.1)
+  - THTools/Base (0.0.2)
+  - THTools/Category (0.0.2)
+  - THTools/Macro (0.0.2)
+  - THTools/Networking (0.0.2):
+    - AFNetworking (~> 4.0)
+  - THTools/Notification (0.0.2)
+  - THTools/Settings (0.0.2):
+    - Masonry
+  - THTools/Utilities (0.0.2)
 
 DEPENDENCIES:
   - THTools (from `../`)
@@ -48,7 +51,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  THTools: 26d106fff2809cdd695c9b08b60a52620af5f244
+  THTools: 627b82511ee8bdc220a87a0d62969940155553f1
 
 PODFILE CHECKSUM: 1ac52a1650c62887f7ae94e17bc4db36c4f1ddf7
 

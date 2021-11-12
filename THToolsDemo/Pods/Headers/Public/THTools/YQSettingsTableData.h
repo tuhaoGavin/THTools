@@ -1,1 +1,0 @@
-../../../../../THTools/Settings/YQSettingsTableData.h

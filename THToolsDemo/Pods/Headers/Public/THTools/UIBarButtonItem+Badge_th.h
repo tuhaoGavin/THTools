@@ -1,0 +1,1 @@
+../../../../../THTools/Category/UIKit/UIButton&UIBarButtonItem/UIBarButtonItem+Badge_th.h

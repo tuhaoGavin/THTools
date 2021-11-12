@@ -1,1 +1,0 @@
-../../../../../THTools/Category/UIKit/UIImage+Capture_yq.h

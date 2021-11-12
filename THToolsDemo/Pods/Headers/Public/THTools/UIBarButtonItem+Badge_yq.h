@@ -1,1 +1,0 @@
-../../../../../THTools/Category/UIKit/UIBarButtonItem+Badge_yq.h

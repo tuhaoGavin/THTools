@@ -1,1 +1,0 @@
-../../../../../THTools/Category/UIKit/UIImage+Alpha_yq.h

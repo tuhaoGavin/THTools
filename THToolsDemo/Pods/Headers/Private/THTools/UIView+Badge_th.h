@@ -1,0 +1,1 @@
+../../../../../THTools/Category/UIKit/UIView/UIView+Badge_th.h

@@ -1,6 +1,6 @@
 {
   "name": "THTools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "OC常用工具",
   "description": "一些开发中常用的工具类",
   "homepage": "https://github.com/tuhaoGavin/THTools",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/tuhaoGavin/THTools.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "10.0"
@@ -20,6 +20,15 @@
     {
       "name": "Base",
       "source_files": "THTools/Base/*"
+    },
+    {
+      "name": "Alert",
+      "source_files": "THTools/Alert/*.{h,m}",
+      "dependencies": {
+        "Masonry": [
+
+        ]
+      }
     },
     {
       "name": "Category",

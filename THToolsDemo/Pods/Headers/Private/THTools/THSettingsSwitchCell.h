@@ -1,0 +1,1 @@
+../../../../../THTools/Settings/THSettingsSwitchCell.h

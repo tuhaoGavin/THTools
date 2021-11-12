@@ -1,1 +1,0 @@
-../../../../../THTools/Category/UIKit/UIColor+Gradient_yq.h

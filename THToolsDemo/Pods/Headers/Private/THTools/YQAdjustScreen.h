@@ -1,1 +1,0 @@
-../../../../../THTools/Utilities/YQAdjustScreen.h
