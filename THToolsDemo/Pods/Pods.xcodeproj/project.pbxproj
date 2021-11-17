@@ -46,7 +46,6 @@
 		15E4DE2657B03C764A96C6A6B3D6B118 /* NSUserDefaults+SafeAccess_th.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F8C1AE9D43C5596FF26EFF179FD6A0 /* NSUserDefaults+SafeAccess_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		185D586DD9F4F38619F9DD0A8CAA0EF1 /* UINavigationBar+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A429C09DD08C572121D806A04E967C0 /* UINavigationBar+Alpha.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1B1F8432EF481F4DD428CF556B83ABF4 /* THTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6EB3E03A3FB68DC478A588990AFE30 /* THTools-dummy.m */; };
-		1C0217FA1BB93BAD50952134338F69D3 /* UIColor+Hex_th.m in Sources */ = {isa = PBXBuildFile; fileRef = B613D40E684712E3C96EE866B6EB2345 /* UIColor+Hex_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D4999F8531C6D02DD18D75D1213A7E0 /* UIView+Util_th.m in Sources */ = {isa = PBXBuildFile; fileRef = 7943B9D26C1B6F55198B5C63D86B95AE /* UIView+Util_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1E1D27D84F9EB82EC4CF0FE6E54C7837 /* THDeviceInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA7D621E3C6FA660040F21E7724575 /* THDeviceInfoHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1E440CD4D70256FB6A468AB3B3163050 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13646318B0CCBEDC507B34BC9F4ED2 /* UIActivityIndicatorView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -287,7 +286,6 @@
 		E9671718C1F77C0447604AD997421145 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 644640F58ADD25ABB3A5DEA4D245B8B8 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E96B15E5570D3B7CF6497AB8A1F8BCDD /* UITableView+Initialize.h in Headers */ = {isa = PBXBuildFile; fileRef = 157711CF17A78700303A543C91E5A7D7 /* UITableView+Initialize.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EC9BDF6E7DB86A770D41BC733CE5C63F /* UIApplication+Util_th.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF7020C1945D9350EAEE8B05FCB436F /* UIApplication+Util_th.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		ECC5E6E5CD5D18838855C45B818F4B9C /* UIColor+Hex_th.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF601D9597D89F93CEE7058117ED2E6 /* UIColor+Hex_th.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EE1BE43908475C4163AB00723118CF10 /* UIDevice+WiFi_th.m in Sources */ = {isa = PBXBuildFile; fileRef = 694DF4DBE64E386CBA2483F4271C1D97 /* UIDevice+WiFi_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EEB61875A7FCDA6CD4F06400D4986C61 /* UIImage+SuperCompress_th.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA77737F276352487B8014809644F1 /* UIImage+SuperCompress_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EEEBBD9BDADC78708B0938C4809CD647 /* THSettingsTimeRangView.h in Headers */ = {isa = PBXBuildFile; fileRef = D81BBDE8A1DF41D78157A019B16DB63C /* THSettingsTimeRangView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -478,7 +476,7 @@
 		567650627F08D406D8A6419A4261C5BC /* THSettingsTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = THSettingsTableView.m; sourceTree = "<group>"; };
 		57C3E81C0D150B4C8C76EEE5FF0CFD40 /* THWeakWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = THWeakWrapper.m; sourceTree = "<group>"; };
 		57FDB27639FFC32F5602733FF367F2BB /* UIImage+Color_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color_th.h"; sourceTree = "<group>"; };
-		5829B720A5719D8E79DB170DA7E7F7D5 /* THTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = THTools.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5829B720A5719D8E79DB170DA7E7F7D5 /* THTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = THTools.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5B6E9ADB79FEBC7223FE3B9179D468E8 /* THSettingsTableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = THSettingsTableData.h; sourceTree = "<group>"; };
 		5CB7A28CD900ADF513C6920E5044FDE5 /* UITextView+Select_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Select_th.h"; sourceTree = "<group>"; };
 		5D01869B94FAD1D4ECBABE3C854DF05A /* UINavigationController+Transitions_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Transitions_th.h"; sourceTree = "<group>"; };
@@ -558,8 +556,7 @@
 		9BC0AA57CB2094F99C0E9CBE79B250E5 /* UIViewController+Jump.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Jump.m"; sourceTree = "<group>"; };
 		9C2168BA2B5FEE68E7CC3B92D966F2ED /* THFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THFoundation.h; path = THTools/Category/THFoundation.h; sourceTree = "<group>"; };
 		9C91D1818F696E6083E4D857CD2242B1 /* UIColor+Modify_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Modify_th.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DF601D9597D89F93CEE7058117ED2E6 /* UIColor+Hex_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex_th.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EF7053D97FC7001B8C31A3E9767C13C /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		9F8A3DF7F2D0B80EBF51FC020C93D8DA /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		A127214E1EE725C5AAC35931E6A1E495 /* NSString+URLEncode_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode_th.h"; sourceTree = "<group>"; };
@@ -595,7 +592,6 @@
 		B53AA358FEB361F664C8CC2D01130459 /* UIButton+Touch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Touch.m"; sourceTree = "<group>"; };
 		B5FABA86973367599E57981690EBB072 /* THCustomerBase64Util.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THCustomerBase64Util.m; path = THTools/Utilities/THCustomerBase64Util.m; sourceTree = "<group>"; };
 		B600FC25C6AD31B5CA0BD70C3AD0EA1C /* UITextField+Select_th.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Select_th.m"; sourceTree = "<group>"; };
-		B613D40E684712E3C96EE866B6EB2345 /* UIColor+Hex_th.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex_th.m"; sourceTree = "<group>"; };
 		B802879B6F199BBE1CD5726FD64BF148 /* UIColor+Random_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random_th.h"; sourceTree = "<group>"; };
 		B8472FFBC779EFEFF12D7BB9225FC525 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		B93A18729A31349410B56763E6FA05ED /* UITextField+Chain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Chain.m"; sourceTree = "<group>"; };
@@ -757,7 +753,6 @@
 				5CB7A28CD900ADF513C6920E5044FDE5 /* UITextView+Select_th.h */,
 				3205BDC8AF351FEFE3C28C62504A4C60 /* UITextView+Select_th.m */,
 			);
-			name = "UITextField&UITextView";
 			path = "UITextField&UITextView";
 			sourceTree = "<group>";
 		};
@@ -768,8 +763,6 @@
 				5043B630651ED9B1A2437B2744AB6642 /* UIColor+Gradient_th.m */,
 				6665E0E95888BA844BB6AEA3E6FE0E2B /* UIColor+Hex.h */,
 				F9C80FCAF89ED300403CC50A32F42A6D /* UIColor+Hex.m */,
-				9DF601D9597D89F93CEE7058117ED2E6 /* UIColor+Hex_th.h */,
-				B613D40E684712E3C96EE866B6EB2345 /* UIColor+Hex_th.m */,
 				9C91D1818F696E6083E4D857CD2242B1 /* UIColor+Modify_th.h */,
 				42D04EDA56A4629A3A139F0D4253C44D /* UIColor+Modify_th.m */,
 				B802879B6F199BBE1CD5726FD64BF148 /* UIColor+Random_th.h */,
@@ -777,7 +770,6 @@
 				EF0233EC8E6AEEF6DBDE93D77D685C27 /* UIColor+Web_th.h */,
 				F11F3B77CF3F1832C11E4AC8BEB88999 /* UIColor+Web_th.m */,
 			);
-			name = UIColor;
 			path = UIColor;
 			sourceTree = "<group>";
 		};
@@ -820,7 +812,6 @@
 				25451A750754C7D538AB62946CAEDCB8 /* ViewController+MASAdditions.m */,
 				2D9309BDA95D4C4C1C6AB267E23BF53F /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -832,7 +823,6 @@
 				8D26C36696614EEB8029128292D81944 /* UIImageView+Reflect_th.h */,
 				177C47EC53CF91FE920FD1A3D2F2640D /* UIImageView+Reflect_th.m */,
 			);
-			name = UIImageView;
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
@@ -844,7 +834,6 @@
 				1514A5F32A9B3ADA0C730D2E54002133 /* UIViewController+Swizzling.h */,
 				D28E77B0F69299FB3466F75639E67A9C /* UIViewController+Swizzling.m */,
 			);
-			name = UIViewController;
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
@@ -854,7 +843,6 @@
 				35C05A6165BB04ECED6909881128ABF9 /* UILabel+AutoSize_th.h */,
 				1768B66DB1FC9E79FDDD7CC1C183F568 /* UILabel+AutoSize_th.m */,
 			);
-			name = UILabel;
 			path = UILabel;
 			sourceTree = "<group>";
 		};
@@ -880,7 +868,6 @@
 				432938F4998A3BDC35E4B4C7E68EDEEC /* UIDevice+WiFi_th.h */,
 				694DF4DBE64E386CBA2483F4271C1D97 /* UIDevice+WiFi_th.m */,
 			);
-			name = UIDevice;
 			path = UIDevice;
 			sourceTree = "<group>";
 		};
@@ -942,7 +929,6 @@
 				F2F4496007B375557BC75A17B33B0D7E /* UIView+Util_th.h */,
 				7943B9D26C1B6F55198B5C63D86B95AE /* UIView+Util_th.m */,
 			);
-			name = UIView;
 			path = UIView;
 			sourceTree = "<group>";
 		};
@@ -1005,7 +991,6 @@
 				8945DB8FE32FE39489D46E17557930EA /* UIButton+Touch.h */,
 				B53AA358FEB361F664C8CC2D01130459 /* UIButton+Touch.m */,
 			);
-			name = "UIButton&UIBarButtonItem";
 			path = "UIButton&UIBarButtonItem";
 			sourceTree = "<group>";
 		};
@@ -1101,7 +1086,6 @@
 				5D01869B94FAD1D4ECBABE3C854DF05A /* UINavigationController+Transitions_th.h */,
 				A2EFCF73C00728F89B79F073D0702589 /* UINavigationController+Transitions_th.m */,
 			);
-			name = "UINavigationController&UINavigationBar";
 			path = "UINavigationController&UINavigationBar";
 			sourceTree = "<group>";
 		};
@@ -1120,7 +1104,6 @@
 				406DB82489B1DEF7A903501271595C92 /* UIView+Chain.h */,
 				AC3DBECDB7D8394F2A5288F53AECA751 /* UIView+Chain.m */,
 			);
-			name = "Chain(链式编程)";
 			path = "Chain(链式编程)";
 			sourceTree = "<group>";
 		};
@@ -1132,7 +1115,6 @@
 				EDF7020C1945D9350EAEE8B05FCB436F /* UIApplication+Util_th.h */,
 				4217CEDB4A39AD1FDFD45C6CFC69EE22 /* UIApplication+Util_th.m */,
 			);
-			name = UIApplication;
 			path = UIApplication;
 			sourceTree = "<group>";
 		};
@@ -1179,8 +1161,8 @@
 				E74EC7364AAC863019E3C77269966FF0 /* NSObject+Runtime_th.m */,
 				F22B795E852B4A19871FEF0D621745B5 /* NSObject+Unicode_th.h */,
 				3AD1D0A4D1D25B3EFC5CF405C98A757B /* NSObject+Unicode_th.m */,
-				E519A8CF324B8F27D53269704A35E590 /* NSString+Base64_th.h */,
 				0243CDF5263C0A9B7B568925B98E822F /* NSString+Base64_th.m */,
+				E519A8CF324B8F27D53269704A35E590 /* NSString+Base64_th.h */,
 				E4C778E3F55642968C707E4B06B7F98D /* NSString+Contains_th.h */,
 				4ACA0E360486D835745336CA3E604318 /* NSString+Contains_th.m */,
 				E0B31D03C9077DF764F62CB6B23CFE86 /* NSString+Dictionary_th.h */,
@@ -1240,7 +1222,6 @@
 				9A51259200CDA6146262759CEA5AAF58 /* UIImage+Util_th.h */,
 				81595830423724C567D05A23232BC5CD /* UIImage+Util_th.m */,
 			);
-			name = UIImage;
 			path = UIImage;
 			sourceTree = "<group>";
 		};
@@ -1256,7 +1237,6 @@
 				1EA9CA94D2C35C0CB032CE38584D3BB6 /* UITableViewCell+EdgeInset.h */,
 				BA5DB18ADEA313564FC7EE7DC4C775AE /* UITableViewCell+EdgeInset.m */,
 			);
-			name = UIScrollView;
 			path = UIScrollView;
 			sourceTree = "<group>";
 		};
@@ -1280,7 +1260,6 @@
 				29ED0A24358C17735B40D2FC3EF52E85 /* UIControl+Sound_th.h */,
 				5E2E611956912BA3B2F94A0C585623E0 /* UIControl+Sound_th.m */,
 			);
-			name = UIControl;
 			path = UIControl;
 			sourceTree = "<group>";
 		};
@@ -1326,7 +1305,6 @@
 				082679E4569DA814CC477E5F8A73E380 /* UIViewController+Jump.h */,
 				9BC0AA57CB2094F99C0E9CBE79B250E5 /* UIViewController+Jump.m */,
 			);
-			name = "NSObject+Jump";
 			path = "NSObject+Jump";
 			sourceTree = "<group>";
 		};
@@ -1345,7 +1323,6 @@
 				E4731A4F9B38033C781F67F48F92512C /* UIWindow+Util_th.h */,
 				201EBB25E747731592482C33539F9C2A /* UIWindow+Util_th.m */,
 			);
-			name = UIWindow;
 			path = UIWindow;
 			sourceTree = "<group>";
 		};
@@ -1368,7 +1345,6 @@
 				A716ABDA0634CF8901FBD554A06499DE /* Support Files */,
 				02B22DE8522C2DE5DBCBCA3AE2CD242F /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -1559,7 +1535,6 @@
 				FC8DF5E4A2F0B153EFA1DD0342CEBC42 /* UIButton+Touch.h in Headers */,
 				36545BDAF86FC0BAAA76D99A4323CAFA /* UIColor+Gradient_th.h in Headers */,
 				FAF86F4BDFBF9F00405ABCC8DBCF6CC5 /* UIColor+Hex.h in Headers */,
-				ECC5E6E5CD5D18838855C45B818F4B9C /* UIColor+Hex_th.h in Headers */,
 				89EE5E342FB1783A114B9CD90054DDDB /* UIColor+Modify_th.h in Headers */,
 				D29B5E1A4B8351C2F36ED620F09AE6CF /* UIColor+Random_th.h in Headers */,
 				237A10F038213266C3B255101EE47C70 /* UIColor+Web_th.h in Headers */,
@@ -1837,7 +1812,6 @@
 				BA86A261CAC9758C356A43C8BED0BAB5 /* UIButton+Touch.m in Sources */,
 				3782F83FB15C78B1DD0B9FF4F200115D /* UIColor+Gradient_th.m in Sources */,
 				CC8B3481C6F7881F2F2156E801B22CA7 /* UIColor+Hex.m in Sources */,
-				1C0217FA1BB93BAD50952134338F69D3 /* UIColor+Hex_th.m in Sources */,
 				4520DBB3A3392D2048C213B0C23F90BE /* UIColor+Modify_th.m in Sources */,
 				AD2FF9AFD145426FEE92D545F8AA7985 /* UIColor+Random_th.m in Sources */,
 				34EC6F2AF13E47512B6D8DAD6827834F /* UIColor+Web_th.m in Sources */,

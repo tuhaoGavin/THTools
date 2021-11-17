@@ -33,7 +33,6 @@
 #import "UIButton+Submitting_th.h"
 // UIColor
 #import "UIColor+Gradient_th.h"
-#import "UIColor+Hex_th.h"
 #import "UIColor+Modify_th.h"
 #import "UIColor+Random_th.h"
 #import "UIColor+Web_th.h"

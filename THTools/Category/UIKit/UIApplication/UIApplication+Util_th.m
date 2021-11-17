@@ -8,6 +8,8 @@
 
 #import "UIApplication+Util_th.h"
 #import <UserNotifications/UserNotifications.h>
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+#import <AdSupport/AdSupport.h>
 #import <sys/sysctl.h>
 #import <mach/mach.h>
 #import <objc/runtime.h>
@@ -34,6 +36,20 @@
     [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
++ (void)th_requestIdfaWithBlock:(THRequestIDFABlock)block {
+    if (@available(iOS 14, *)) {
+        // iOS14及以上版本需要先请求权限
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            BOOL enable = status == ATTrackingManagerAuthorizationStatusAuthorized;
+            NSString *idfa = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
+            !block ?: block(enable, idfa);
+        }];
+    } else {
+        BOOL enable = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
+        NSString *idfa = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
+        !block ?: block(enable, idfa);
+    }
+}
 + (UIImage *)th_launchImage {
     
     NSString *UILaunchStoryboardName = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"UILaunchStoryboardName"];

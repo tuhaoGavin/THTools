@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117B80802743AA7B008E0C71 /* TestAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B807F2743AA7B008E0C71 /* TestAlert.m */; };
+		117B80822743AACB008E0C71 /* TestAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117B80812743AACB008E0C71 /* TestAlert.xib */; };
 		11E7D2E2272AA62D00EB8F57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7D2E1272AA62D00EB8F57 /* AppDelegate.m */; };
 		11E7D2E8272AA62D00EB8F57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7D2E7272AA62D00EB8F57 /* ViewController.m */; };
 		11E7D2EB272AA62D00EB8F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E7D2E9272AA62D00EB8F57 /* Main.storyboard */; };
@@ -18,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		0D3CA245ABEFBBB011111BB4 /* libPods-THToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-THToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117B807E2743AA7B008E0C71 /* TestAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAlert.h; sourceTree = "<group>"; };
+		117B807F2743AA7B008E0C71 /* TestAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAlert.m; sourceTree = "<group>"; };
+		117B80812743AACB008E0C71 /* TestAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestAlert.xib; sourceTree = "<group>"; };
 		11E7D2DD272AA62D00EB8F57 /* THToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E7D2E0272AA62D00EB8F57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11E7D2E1272AA62D00EB8F57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +87,9 @@
 				11E7D2EE272AA63800EB8F57 /* LaunchScreen.storyboard */,
 				11E7D2F1272AA63800EB8F57 /* Info.plist */,
 				11E7D2F2272AA63800EB8F57 /* main.m */,
+				117B807E2743AA7B008E0C71 /* TestAlert.h */,
+				117B807F2743AA7B008E0C71 /* TestAlert.m */,
+				117B80812743AACB008E0C71 /* TestAlert.xib */,
 			);
 			path = THToolsDemo;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			files = (
 				11E7D2F0272AA63800EB8F57 /* LaunchScreen.storyboard in Resources */,
 				11E7D2ED272AA63800EB8F57 /* Assets.xcassets in Resources */,
+				117B80822743AACB008E0C71 /* TestAlert.xib in Resources */,
 				11E7D2EB272AA62D00EB8F57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +219,7 @@
 			files = (
 				11E7D2E8272AA62D00EB8F57 /* ViewController.m in Sources */,
 				11E7D2E2272AA62D00EB8F57 /* AppDelegate.m in Sources */,
+				117B80802743AA7B008E0C71 /* TestAlert.m in Sources */,
 				11E7D2F3272AA63800EB8F57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

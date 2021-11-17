@@ -6,8 +6,10 @@
 //
 
 #import "ViewController.h"
+#import <THTools.h>
 #import <THSettings.h>
 #import <Masonry.h>
+#import "TestAlert.h"
 
 @interface ViewController ()<THSettingsTableViewDelegate>
 @property (nonatomic, strong) THSettingsTableView * tableView;
@@ -35,6 +37,7 @@
                 @{
                     Title: @"黑名单列表",
                     TitleFont: @(14),
+                    TitleColor: @"FF0000",
                     ShowAccessory: @(YES),
                     CellAction: @"blackListAction"
                 }
@@ -44,7 +47,9 @@
 }
 
 - (void)blackListAction {
-    NSLog(@"点击了黑名单列表");
+    NSLog(@"点击了黑名单列表%@", [THDeviceInfoHelper phoneName]);
+    TestAlert * alert = [TestAlert alertWithPosition:THAlertViewPositionMid];
+    [alert show];
 }
 
 #pragma mark - getter

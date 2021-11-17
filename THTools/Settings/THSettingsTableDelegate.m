@@ -193,7 +193,7 @@ static NSInteger const KRedPointTag = 88999;
     cell.textLabel.text = rowData.title;
     cell.detailTextLabel.text = rowData.detailTitle;
     if (rowData.titleColor) {
-        cell.textLabel.textColor = [UIColor th_colorWithHexString:rowData.titleColor];
+        cell.textLabel.textColor = HexColor(rowData.titleColor);
     }
     if (rowData.titleFont) {
         cell.textLabel.font = [UIFont systemFontOfSize:rowData.titleFont];
@@ -202,7 +202,7 @@ static NSInteger const KRedPointTag = 88999;
         cell.detailTextLabel.font = [UIFont systemFontOfSize:rowData.detailFont];
     }
     if (rowData.detailColor) {
-        cell.detailTextLabel.textColor = [UIColor th_colorWithHexString:rowData.detailColor];
+        cell.detailTextLabel.textColor = HexColor(rowData.detailColor);
     }
     cell.imageView.image = rowData.image;
     

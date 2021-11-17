@@ -12,12 +12,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^THRegistAPNSBlock)(BOOL granted);
 
+typedef void(^THRequestIDFABlock)(BOOL enable, NSString *idfaStr);
+
 @interface UIApplication (Util_th)
 
 /**
  *  注册APNs
  */
 + (void)th_registerAPNsWithBlock:(THRegistAPNSBlock)block;
+
+/**
+ * 请求IDFA (若未开启广告追踪，则获取到的idfa为00000000-0000-0000-0000-000000000000)
+ *
+ */
++ (void)th_requestIdfaWithBlock:(THRequestIDFABlock)block;
 
 /**
  *  获取启动页图片
