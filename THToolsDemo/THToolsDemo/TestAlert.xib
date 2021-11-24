@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="THAlertView">
-            <rect key="frame" x="0.0" y="0.0" width="532" height="521"/>
+            <rect key="frame" x="0.0" y="0.0" width="508" height="347"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试弹窗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeg-Zq-bOo">
-                    <rect key="frame" x="231" y="255.5" width="70" height="20.5"/>
+                    <rect key="frame" x="219" y="168.5" width="70" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                     <real key="value" value="10"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-347.82608695652175" y="-35.825892857142854"/>
+            <point key="canvasLocation" x="-365.21739130434787" y="-94.084821428571431"/>
         </view>
     </objects>
     <resources>

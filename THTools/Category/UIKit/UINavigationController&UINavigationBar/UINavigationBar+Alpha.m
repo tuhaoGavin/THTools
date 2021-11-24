@@ -34,6 +34,7 @@
 }
 
 -(void)setBarAlpha:(CGFloat)barAlpha {
+    barAlpha = barAlpha > 1 ? 1 : barAlpha;
     objc_setAssociatedObject(self, @selector(barAlpha), @(barAlpha), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     UIColor * color = self.barTintColor ? self.barTintColor : UIColor.whiteColor;
@@ -44,7 +45,7 @@
         if (self.hidesShadow) {
             [barApp setShadowImage:[UIImage new]];
         } else {
-            [barApp setShadowImage:[[UIImage th_imageWithColor:[UIColor colorWithWhite:0.4 alpha:barAlpha/2]] th_changeImageSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)]];
+            [barApp setShadowImage:[[UIImage th_imageWithColor:[UIColor colorWithWhite:0.5 alpha:barAlpha/2.5]] th_changeImageSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)]];
         }
         barApp.backgroundEffect = nil;
         self.scrollEdgeAppearance = barApp;
@@ -54,7 +55,7 @@
         if (self.hidesShadow) {
             [self setShadowImage:[UIImage new]];
         } else {
-            [self setShadowImage:[[UIImage th_imageWithColor:[UIColor colorWithWhite:0.4 alpha:barAlpha/2]] th_changeImageSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)]];
+            [self setShadowImage:[[UIImage th_imageWithColor:[UIColor colorWithWhite:0.5 alpha:barAlpha/2.5]] th_changeImageSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)]];
         }
     }
     
