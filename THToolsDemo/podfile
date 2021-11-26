@@ -6,7 +6,7 @@ inhibit_all_warnings!
 
 target 'THToolsDemo' do
 
-pod 'THTools', :path => '../'
+pod 'THTools', :path => '../', :subspecs => ['NaviBarTransition']
 
 end
 

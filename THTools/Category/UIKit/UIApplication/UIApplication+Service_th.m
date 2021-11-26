@@ -3,7 +3,7 @@
 //  THToolsDemo
 //
 //  Created by WeiXinbing on 2019/1/22.
-//  Copyright © 2019 weixb. All rights reserved.
+//  Copyright © 2019 TuHao. All rights reserved.
 //
 
 #import "UIApplication+Service_th.h"

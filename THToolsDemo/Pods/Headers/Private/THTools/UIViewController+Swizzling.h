@@ -1,1 +1,1 @@
-../../../../../THTools/Category/UIKit/UIViewController/UIViewController+Swizzling.h
+../../../../../THTools/NaviBarTransition/UIViewController+Swizzling.h

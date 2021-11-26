@@ -2,8 +2,8 @@
 //  UILabel+AutoSize_th.m
 //  THToolsDemo
 //
-//  Created by weixb on 2017/2/16.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/2/16.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #import "UILabel+AutoSize_th.h"

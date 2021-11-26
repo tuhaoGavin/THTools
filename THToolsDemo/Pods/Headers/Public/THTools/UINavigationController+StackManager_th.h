@@ -1,1 +1,1 @@
-../../../../../THTools/Category/UIKit/UINavigationController&UINavigationBar/UINavigationController+StackManager_th.h
+../../../../../THTools/Category/UIKit/UINavigationController/UINavigationController+StackManager_th.h

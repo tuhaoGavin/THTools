@@ -2,8 +2,8 @@
 //  THBaseArchiveModel.m
 //  THToolsDemo
 //
-//  Created by weixb on 2017/7/27.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/7/27.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #import "THBaseArchiveModel.h"
@@ -13,7 +13,7 @@
 static id instance; // 单例（全局变量）
 
 /** 单例方法 */
-+ (instancetype)sharedModel {
++ (instancetype)shared {
     // 使用GCD确保只进行一次
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

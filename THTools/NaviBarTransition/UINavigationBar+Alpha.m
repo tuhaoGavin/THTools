@@ -22,8 +22,6 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        //默认隐藏导航栏底部细线
-        [UINavigationBar appearance].hidesShadow = YES;
         swizzling_exchangeMethod([self class], @selector(setBarTintColor:), @selector(swizzling_setBarTintColor:));
     });
 }

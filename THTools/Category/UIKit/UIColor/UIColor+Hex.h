@@ -19,10 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)colorWithHexString:(NSString *)hexRGBString alpha:(CGFloat)alpha;
 
-/// 通过HEX16进制获取颜色
-/// @param hex 颜色的16进制值 fg:0XFF0000
-+ (UIColor *)colorWithHexInt:(UInt32)hex;
-
 ///值不需要除以255.0
 + (UIColor *)colorWithWholeRed:(CGFloat)red
                              green:(CGFloat)green
@@ -32,14 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)colorWithWholeRed:(CGFloat)red
                              green:(CGFloat)green
                               blue:(CGFloat)blue;
-/** 颜色的hex16进制字符串 */
-- (NSString *)th_HEXString;
-
-
-/// 设置不同模式下的颜色
-/// @param lightColor 普通模式下颜色
-/// @param darkColor 深色模式下颜色
-+ (UIColor *)colorWithLight:(UIColor *)lightColor dark:(UIColor *)darkColor;
 
 @end
 

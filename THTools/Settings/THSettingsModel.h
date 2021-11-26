@@ -2,8 +2,8 @@
 //  THSettingsModel.h
 //  THSettingsDemo
 //
-//  Created by weixb on 2017/12/15.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/12/15.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

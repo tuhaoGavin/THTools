@@ -2,15 +2,15 @@
 //  THBaseArchiveModel.h
 //  THToolsDemo
 //
-//  Created by weixb on 2017/7/27.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/7/27.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface THBaseArchiveModel : NSObject
 
-+ (instancetype)sharedModel;
++ (instancetype)shared;
 - (void)archive;
 - (void)deleteData;
 

@@ -2,8 +2,8 @@
 //  THUtilsMacro.h
 //  Tools
 //
-//  Created by weixb on 16/12/14.
-//  Copyright © 2016年 weixb. All rights reserved.
+//  Created by 涂浩 on 16/12/14.
+//  Copyright © 2016年 TuHao. All rights reserved.
 //
 
 #ifndef THUtilsMacro_h

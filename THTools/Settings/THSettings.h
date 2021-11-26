@@ -2,8 +2,8 @@
 //  THSettings.h
 //  THSettingsDemo
 //
-//  Created by weixb on 2017/12/15.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/12/15.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #ifndef THSettings_h
@@ -49,7 +49,7 @@ static inline UIViewController *THViewController(UIView *view) {
 }
 
 NS_INLINE UIImage * THImage(NSString * imgName) {
-    NSString *bundleName = @"Resource";
+    NSString *bundleName = @"THResource";
     //framework
     NSBundle * bundle = [NSBundle bundleForClass:NSClassFromString(@"THSettings")];
 

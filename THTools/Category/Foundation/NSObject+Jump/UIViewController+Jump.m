@@ -31,7 +31,14 @@
     [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
-
+- (void)th_addTransitionAnimationWithType:(CATransitionType)type subType:(CATransitionSubtype)subType timingFunctionName:(CAMediaTimingFunctionName)timingFunctionName duration:(CFTimeInterval)duration {
+    CATransition *animation = [CATransition animation];
+    animation.type = type;
+    animation.subtype = subType;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:timingFunctionName];
+    animation.duration = duration;
+    [self.view.window.layer addAnimation:animation forKey:nil];
+}
 
 
 

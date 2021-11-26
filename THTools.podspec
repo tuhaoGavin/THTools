@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "THTools"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "OC常用工具"
 
   # This description is used to generate tags and improve search results.
@@ -95,47 +95,26 @@ Pod::Spec.new do |spec|
   #spec.exclude_files = "Classes/Exclude"
   
   spec.ios.deployment_target = "10.0"
-  spec.source_files = 'THTools/*'
-
-  spec.subspec 'Base' do |ss|
-  ss.source_files = 'THTools/Base/*'
-  end
-
-  spec.subspec 'Alert' do |ss|
-  ss.source_files = 'THTools/Alert/*.{h,m}'
+  spec.default_subspecs = 'Core'
+  
+  spec.subspec 'Core' do |ss|
+  ss.frameworks = 'UIKit','Foundation'
+  ss.source_files = 'THTools/**/*.{h,m}'
+  ss.exclude_files = 'THTools/NaviBarTransition/*.{h,m}'
   ss.dependency 'Masonry'
-  end
-
-  spec.subspec 'Category' do |ss|
-  ss.source_files = 'THTools/Category/**/*'
-  end
-
-  spec.subspec 'Macro' do |ss|
-  ss.source_files = 'THTools/Macro/*.{h}'
-  end
-
-  spec.subspec 'Networking' do |ss|
-  ss.source_files = 'THTools/Networking/*.{h,m}'
   ss.dependency 'AFNetworking', '~> 4.0'
+  #ss.resource = 'THTools/Settings/THResource.bundle'
+  ss.resource_bundles = {
+    'THResource' => ['THTools/Settings/THResource.bundle']
+  }
   end
 
-  spec.subspec 'Notification' do |ss|
-  ss.source_files = 'THTools/Notification/*.{h,m}'
+  spec.subspec 'NaviBarTransition' do |ss|
+  ss.source_files = 'THTools/NaviBarTransition/*.{h,m}'
+  ss.dependency 'THTools/Core'
+  ss.dependency 'RTRootNavigationController'
   end
-
-  spec.subspec 'Utilities' do |ss|
-  ss.source_files = 'THTools/Utilities/*.{h,m}'
-  end
-
-  spec.subspec 'Settings' do |ss|
-  ss.source_files = 'THTools/Settings/*.{h,m}', 'THTools/Category/**/*'
-  ss.resource = 'THTools/Settings/Resource.bundle'
-  ss.dependency 'Masonry'
-  #ss.frameworks = 'UIKit',"Foundation"
-  #ss.resource_bundle = {
-  #  'THSetting' => ['THTools/Settings/*.xcassets'] #THSetting为生成boudle的名称
-  #}
-  end
+  
 
   # spec.public_header_files = "Classes/**/*.h"
 

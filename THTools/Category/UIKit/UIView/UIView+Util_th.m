@@ -2,8 +2,8 @@
 //  UIView+Util_th.m
 //  Tools
 //
-//  Created by weixb on 16/12/19.
-//  Copyright © 2016年 weixb. All rights reserved.
+//  Created by 涂浩 on 16/12/19.
+//  Copyright © 2016年 TuHao. All rights reserved.
 //
 
 #import "UIView+Util_th.h"
@@ -217,7 +217,7 @@
     self.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
 
-- (void)addShadowWithColor:(UIColor *)theColor {
+- (void)addNormalShadowWithColor:(UIColor *)theColor {
     [self addShadowWithColor:theColor offset:CGSizeMake(1, 1) radius:3];
 }
 

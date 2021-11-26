@@ -7,9 +7,10 @@
 
 #import "ViewController.h"
 #import <THTools.h>
+#import <THNaviBarTransition.h>
 #import <THSettings.h>
 #import <Masonry.h>
-#import "TestAlert.h"
+#import "TestVC.h"
 
 @interface ViewController ()<THSettingsTableViewDelegate>
 @property (nonatomic, strong) THSettingsTableView * tableView;
@@ -31,9 +32,8 @@
 }
 
 - (void)createUI {
-    self.title = @"Test Demo";
+    self.title = @"导航栏滑动渐变";
     self.isUseClearBar = YES;
-    self.navigationController.navigationBar.hidesShadow = NO;
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -47,7 +47,6 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     CGFloat alpha = (self.tableView.contentOffset.y + KNavBarHAbove) / 10;
-    NSLog(@"%.2f", alpha);
     [self setAlphaForNaviBar:alpha];
 }
 
@@ -59,28 +58,21 @@
             FooterHeight: @(15),
             RowContent: @[
                 @{
-                    Title: @"黑名单列表",
+                    Title: @"跳转至带导航栏的控制器",
                     TitleFont: @(14),
                     TitleColor: @"FF0000",
                     ShowAccessory: @(YES),
                     CellAction: @"blackListAction"
                 },
-                @{
-                    Title: @"黑名单列表",
-                    TitleFont: @(14),
-                    TitleColor: @"FF0000",
-                    ShowAccessory: @(YES),
-                    CellAction: @"blackListAction"
-                }
             ]
         }
     ];
 }
 
 - (void)blackListAction {
-    NSLog(@"点击了黑名单列表%@", [THDeviceInfoHelper phoneName]);
-    TestAlert * alert = [TestAlert alertWithPosition:THAlertViewPositionMid];
-    [alert show];
+    TestVC * vc = [[TestVC alloc] init];
+    [self th_addTransitionAnimationWithType:@"pageCurl" subType:kCATransitionFromLeft timingFunctionName:kCAMediaTimingFunctionEaseIn duration:1];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - getter

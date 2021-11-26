@@ -15,34 +15,24 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
-  - THTools (0.0.2):
-    - THTools/Alert (= 0.0.2)
-    - THTools/Base (= 0.0.2)
-    - THTools/Category (= 0.0.2)
-    - THTools/Macro (= 0.0.2)
-    - THTools/Networking (= 0.0.2)
-    - THTools/Notification (= 0.0.2)
-    - THTools/Settings (= 0.0.2)
-    - THTools/Utilities (= 0.0.2)
-  - THTools/Alert (0.0.2):
-    - Masonry
-  - THTools/Base (0.0.2)
-  - THTools/Category (0.0.2)
-  - THTools/Macro (0.0.2)
-  - THTools/Networking (0.0.2):
+  - RTRootNavigationController (0.8.0):
+    - RTRootNavigationController/Core (= 0.8.0)
+  - RTRootNavigationController/Core (0.8.0)
+  - THTools/Core (0.0.3):
     - AFNetworking (~> 4.0)
-  - THTools/Notification (0.0.2)
-  - THTools/Settings (0.0.2):
     - Masonry
-  - THTools/Utilities (0.0.2)
+  - THTools/NaviBarTransition (0.0.3):
+    - RTRootNavigationController
+    - THTools/Core
 
 DEPENDENCIES:
-  - THTools (from `../`)
+  - THTools/NaviBarTransition (from `../`)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
     - Masonry
+    - RTRootNavigationController
 
 EXTERNAL SOURCES:
   THTools:
@@ -51,8 +41,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  THTools: 627b82511ee8bdc220a87a0d62969940155553f1
+  RTRootNavigationController: 36c6301870f0467f89d69f4286795340b537d473
+  THTools: c9ac7cdabb8bdb9b4dd3fa570ccc2ac0f0d94e54
 
-PODFILE CHECKSUM: 1ac52a1650c62887f7ae94e17bc4db36c4f1ddf7
+PODFILE CHECKSUM: 2a77013de29d388f78233f17a5c3da526444ba0c
 
 COCOAPODS: 1.11.2

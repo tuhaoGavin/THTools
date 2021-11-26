@@ -2,8 +2,8 @@
 //  UIView+GestureBlock_th.m
 //  THToolsDemo
 //
-//  Created by weixb on 2017/3/23.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/3/23.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #import "UIView+GestureBlock_th.h"

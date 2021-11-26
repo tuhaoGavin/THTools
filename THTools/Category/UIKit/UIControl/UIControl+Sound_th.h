@@ -2,8 +2,8 @@
 //  UIControl+Sound_th.h
 //  THToolsDemo
 //
-//  Created by weixb on 2017/2/16.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/2/16.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 //  https://github.com/scopegate/octave
 //  Octave: A free library of UI sounds, handmade for iOS http://raisedbeaches.com/octave

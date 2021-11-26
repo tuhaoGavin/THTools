@@ -2,8 +2,8 @@
 //  THSettingsTableDelegate.m
 //  THSettingsDemo
 //
-//  Created by weixb on 2017/12/15.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/12/15.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #import "THSettingsTableDelegate.h"
@@ -193,7 +193,7 @@ static NSInteger const KRedPointTag = 88999;
     cell.textLabel.text = rowData.title;
     cell.detailTextLabel.text = rowData.detailTitle;
     if (rowData.titleColor) {
-        cell.textLabel.textColor = HexColor(rowData.titleColor);
+        cell.textLabel.textColor = [UIColor th_colorWithHexString:rowData.titleColor];
     }
     if (rowData.titleFont) {
         cell.textLabel.font = [UIFont systemFontOfSize:rowData.titleFont];
@@ -202,7 +202,7 @@ static NSInteger const KRedPointTag = 88999;
         cell.detailTextLabel.font = [UIFont systemFontOfSize:rowData.detailFont];
     }
     if (rowData.detailColor) {
-        cell.detailTextLabel.textColor = HexColor(rowData.detailColor);
+        cell.detailTextLabel.textColor = [UIColor th_colorWithHexString:rowData.detailColor];
     }
     cell.imageView.image = rowData.image;
     

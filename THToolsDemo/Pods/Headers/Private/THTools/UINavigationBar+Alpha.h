@@ -1,1 +1,1 @@
-../../../../../THTools/Category/UIKit/UINavigationController&UINavigationBar/UINavigationBar+Alpha.h
+../../../../../THTools/NaviBarTransition/UINavigationBar+Alpha.h

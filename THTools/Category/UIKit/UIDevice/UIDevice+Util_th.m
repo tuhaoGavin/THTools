@@ -3,7 +3,7 @@
 //  THToolsDemo
 //
 //  Created by WeiXinbing on 2019/6/5.
-//  Copyright © 2019 weixb. All rights reserved.
+//  Copyright © 2019 TuHao. All rights reserved.
 //
 
 #import "UIDevice+Util_th.h"

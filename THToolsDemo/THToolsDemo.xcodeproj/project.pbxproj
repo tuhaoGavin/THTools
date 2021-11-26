@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1169F1BF274F29820031024B /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1169F1BE274F29820031024B /* TestVC.m */; };
 		117B80802743AA7B008E0C71 /* TestAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B807F2743AA7B008E0C71 /* TestAlert.m */; };
 		117B80822743AACB008E0C71 /* TestAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117B80812743AACB008E0C71 /* TestAlert.xib */; };
 		11E7D2E2272AA62D00EB8F57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7D2E1272AA62D00EB8F57 /* AppDelegate.m */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		0D3CA245ABEFBBB011111BB4 /* libPods-THToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-THToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1169F1BD274F29820031024B /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		1169F1BE274F29820031024B /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		117B807E2743AA7B008E0C71 /* TestAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAlert.h; sourceTree = "<group>"; };
 		117B807F2743AA7B008E0C71 /* TestAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAlert.m; sourceTree = "<group>"; };
 		117B80812743AACB008E0C71 /* TestAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestAlert.xib; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				11E7D2E1272AA62D00EB8F57 /* AppDelegate.m */,
 				11E7D2E6272AA62D00EB8F57 /* ViewController.h */,
 				11E7D2E7272AA62D00EB8F57 /* ViewController.m */,
+				1169F1BD274F29820031024B /* TestVC.h */,
+				1169F1BE274F29820031024B /* TestVC.m */,
 				11E7D2E9272AA62D00EB8F57 /* Main.storyboard */,
 				11E7D2EC272AA63800EB8F57 /* Assets.xcassets */,
 				11E7D2EE272AA63800EB8F57 /* LaunchScreen.storyboard */,
@@ -114,7 +119,7 @@
 				11E7D2D9272AA62D00EB8F57 /* Sources */,
 				11E7D2DA272AA62D00EB8F57 /* Frameworks */,
 				11E7D2DB272AA62D00EB8F57 /* Resources */,
-				15DBA951DA3BCC95839516AD /* [CP] Copy Pods Resources */,
+				3AD10DE6207B6CCC9B603828 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,7 +176,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15DBA951DA3BCC95839516AD /* [CP] Copy Pods Resources */ = {
+		3AD10DE6207B6CCC9B603828 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,6 +225,7 @@
 				11E7D2E8272AA62D00EB8F57 /* ViewController.m in Sources */,
 				11E7D2E2272AA62D00EB8F57 /* AppDelegate.m in Sources */,
 				117B80802743AA7B008E0C71 /* TestAlert.m in Sources */,
+				1169F1BF274F29820031024B /* TestVC.m in Sources */,
 				11E7D2F3272AA63800EB8F57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +379,7 @@
 					"\"${PODS_ROOT}/Headers/Public/THTools\"",
 				);
 				INFOPLIST_FILE = THToolsDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +406,7 @@
 					"\"${PODS_ROOT}/Headers/Public/THTools\"",
 				);
 				INFOPLIST_FILE = THToolsDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

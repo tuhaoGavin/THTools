@@ -1,9 +1,9 @@
 //
-//  WXBNetworking.h
+//  THNetworking.h
 //  Gaia
 //
-//  Created by 魏心兵 on 16/3/31.
-//  Copyright © 2016年 Weixb. All rights reserved.
+//  Created by 涂浩 on 16/3/31.
+//  Copyright © 2016年 TuHao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -3,7 +3,7 @@
 //  THToolsDemo
 //
 //  Created by WeiXinbing on 2017/7/2.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #import "UIButton+MiddleAligning_th.h"

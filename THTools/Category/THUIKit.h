@@ -2,8 +2,8 @@
 //  THUIKit.h
 //  THToolsDemo
 //
-//  Created by weixb on 2017/2/16.
-//  Copyright © 2017年 weixb. All rights reserved.
+//  Created by 涂浩 on 2017/2/16.
+//  Copyright © 2017年 TuHao. All rights reserved.
 //
 
 #ifndef THUIKit_h
@@ -18,9 +18,7 @@
 
 #import "UILabel+AutoSize_th.h"
 // UINavigationController
-#import "UINavigationController+Transitions_th.h"
 #import "UINavigationController+StackManager_th.h"
-#import "UINavigationBar+Alpha.h"
 // UIButton
 #import "UIButton+BackgroundColor_th.h"
 #import "UIButton+Badge_th.h"
@@ -33,6 +31,7 @@
 #import "UIButton+Submitting_th.h"
 // UIColor
 #import "UIColor+Gradient_th.h"
+#import "UIColor+Hex_th.h"
 #import "UIColor+Modify_th.h"
 #import "UIColor+Random_th.h"
 #import "UIColor+Web_th.h"
@@ -80,8 +79,9 @@
 // UIWindow
 #import "UIWindow+Util_th.h"
 // UIViewController
-#import "UIViewController+Swizzling.h"
 #import "UIViewController+ScrollViewAdapter.h"
+#import "UIViewController+Jump.h"
+#import "UIViewController+BackButtonHandler.h"
 
 #import "ChainHeader.h"
 
