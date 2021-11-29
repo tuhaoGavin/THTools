@@ -7,8 +7,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "THTools.h"
-#import "RTRootNavigationController.h"
+#import <THTools.h>
+#import <RTRootNavigationController.h>
 
 @interface AppDelegate ()
 

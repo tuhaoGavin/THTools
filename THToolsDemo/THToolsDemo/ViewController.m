@@ -40,11 +40,12 @@
         make.edges.offset(0);
     }];
 }
-
+/** 添加KVO事件观察绑定 */
 - (void)setupEventBinding {
     [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
 
+#pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     CGFloat alpha = (self.tableView.contentOffset.y + KNavBarHAbove) / 10;
     [self setAlphaForNaviBar:alpha];

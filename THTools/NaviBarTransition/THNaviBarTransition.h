@@ -11,5 +11,6 @@
 #import "UINavigationBar+Alpha.h"
 #import "UIViewController+Swizzling.h"
 #import "THVcControl.h"
+#import <RTRootNavigationController.h>
 
 #endif /* THNaviBarTransition_h */
