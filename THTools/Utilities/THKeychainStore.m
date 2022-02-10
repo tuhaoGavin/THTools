@@ -7,6 +7,7 @@
 //
 
 #import "THKeychainStore.h"
+#import <UIKit/UIKit.h>
 //#import <AdSupport/AdSupport.h>
 
 static NSString * const KeyForUUID = @"com.lobochat.Single.usernamepassword";

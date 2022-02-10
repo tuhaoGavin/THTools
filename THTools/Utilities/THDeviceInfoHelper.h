@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
