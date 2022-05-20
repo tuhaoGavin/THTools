@@ -1065,6 +1065,18 @@ static inline void alertSureInfo(NSString *content) {
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
++ (BOOL)hasNet {
+    return (self.netStatus == AFNetworkReachabilityStatusReachableViaWWAN || self.netStatus == AFNetworkReachabilityStatusReachableViaWiFi);
+}
+
++ (AFNetworkReachabilityStatus)netStatus {
+    AFNetworkReachabilityStatus status = [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus;
+    return status;
+}
+
++ (BOOL)hasNetWithStatus:(AFNetworkReachabilityStatus)status {
+    return (status== AFNetworkReachabilityStatusReachableViaWWAN || status == AFNetworkReachabilityStatusReachableViaWiFi);
+}
 
 @end
 

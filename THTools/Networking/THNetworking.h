@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#if __has_include(<AFNetworking/AFNetworking.h>)
+#import <AFNetworking/AFNetworking.h>
+#else
+#import "AFNetworking.h"
+#endif
 
 UIKIT_EXTERN NSString *const THNetworkStatus;
 
@@ -273,6 +278,13 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
 /// 设置网络请求超时时间
 /// @param timeoutInterval 超时时间
 + (void)setTimeoutInterval:(NSTimeInterval)timeoutInterval;
+
+/// 当前是否有网络
++ (BOOL)hasNet;
+/// 该状态是否有网络
++ (BOOL)hasNetWithStatus:(AFNetworkReachabilityStatus)status;
+/// 网络状态
++ (AFNetworkReachabilityStatus)netStatus;
 
 
 @end
