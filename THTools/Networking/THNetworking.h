@@ -16,6 +16,12 @@
 
 UIKIT_EXTERN NSString *const THNetworkStatus;
 
+/**
+ *  请求状态变化回调
+ *  @param status  网络状态枚举
+ */
+typedef void(^NetStatus)(AFNetworkReachabilityStatus status);
+
 // 请勿直接使用NSURLSessionDataTask,以减少对第三方的依赖
 // 所有接口返回的类型都是基类NSURLSessionTask，若要接收返回值且处理，请转换成对应的子类类型
 typedef NSURLSessionTask WXBURLSessionTask;
@@ -265,7 +271,7 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
 + (void)enableInterfaceDebug:(BOOL)isDebug;
 
 //使用AFN框架来检测网络状态的改变
-+ (void)AFNReachability;
++ (void)startMonitoringNetStatus:(NetStatus)netStatus;
 
 /**
  *
@@ -285,6 +291,5 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
 + (BOOL)hasNetWithStatus:(AFNetworkReachabilityStatus)status;
 /// 网络状态
 + (AFNetworkReachabilityStatus)netStatus;
-
 
 @end

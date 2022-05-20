@@ -1023,8 +1023,7 @@ static inline NSString *cachePath() {
     }
 }
 //使用AFN框架来检测网络状态的改变
-+ (void)AFNReachability
-{
++ (void)startMonitoringNetStatus:(NetStatus)netStatus {
     //1.创建网络监听管理者
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
     
@@ -1050,6 +1049,9 @@ static inline NSString *cachePath() {
         }
         NSLog(@"%@", network);
         [[NSUserDefaults standardUserDefaults] setObject:network forKey:THNetworkStatus];
+        if (netStatus) {
+            netStatus(status);
+        }
     }];
     
     //3.开始监听

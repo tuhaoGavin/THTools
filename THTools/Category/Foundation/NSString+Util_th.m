@@ -159,7 +159,4 @@
 
 }
 
-- (NSString *)th_noEmptyStr {
-    return [NSString th_noEmptyStr:self];
-}
 @end

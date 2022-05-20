@@ -62,5 +62,4 @@
 +(NSString *)th_getMMSSFromSS:(NSString *)totalTime;
 
 
-- (NSString *)th_noEmptyStr;
 @end
