@@ -76,6 +76,7 @@ static BOOL sg_cacheGet = YES;
 static BOOL sg_cachePost = NO;
 static BOOL sg_shouldCallbackOnCancelRequest = YES;
 static NSInteger sg_numberOfTimesToRetry = 3;
+static NSTimeInterval sg_timeoutInterval = 15.0f;
 static NSMutableDictionary *sg_timesOfRetryURLs;
 
 @implementation THNetworking
@@ -87,6 +88,10 @@ static NSMutableDictionary *sg_timesOfRetryURLs;
 
 + (void)setNumberOfTimesToRetryOnTimeout:(NSInteger)number {
     sg_numberOfTimesToRetry = number;
+}
+
++(void)setTimeoutInterval:(NSTimeInterval)timeoutInterval {
+    sg_timeoutInterval = timeoutInterval;
 }
 
 + (void)updateBaseUrl:(NSString *)baseUrl {
@@ -796,7 +801,7 @@ static inline NSString *cachePath() {
     // 设置超时限制
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     
-    manager.requestSerializer.timeoutInterval = 15.0f;
+    manager.requestSerializer.timeoutInterval = sg_timeoutInterval;
     
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     return manager;

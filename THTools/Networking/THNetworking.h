@@ -270,4 +270,9 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
  */
 + (void)setNumberOfTimesToRetryOnTimeout:(NSInteger)number;
 
+/// 设置网络请求超时时间
+/// @param timeoutInterval 超时时间
++ (void)setTimeoutInterval:(NSTimeInterval)timeoutInterval;
+
+
 @end

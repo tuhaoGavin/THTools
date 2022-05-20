@@ -8,6 +8,7 @@
 
 #import "UITableView+Initialize.h"
 #import "SwizzlingDefine.h"
+#import "UIView+Radius_th.h"
 @implementation UITableView (Initialize)
 
 + (void)load {
@@ -40,6 +41,24 @@
     if (@available(iOS 15.0, *)) {
         self.sectionHeaderTopPadding = 0;
     }
+}
+
+- (void)cornerRadiusWithCell:(UITableViewCell *)cell
+                     radius:(NSInteger)radius
+                  indexPath:(nonnull NSIndexPath *)indexPath {
+    NSInteger rowsNum = [self numberOfRowsInSection:indexPath.section];
+    if (rowsNum == 1) {
+        [cell radiusWithRadius:10 corner:UIRectCornerAllCorners];
+    } else {
+        if (indexPath.row == 0) {
+            [cell radiusWithRadius:10 corner:UIRectCornerTopLeft|UIRectCornerTopRight];
+        } else if (indexPath.row == rowsNum - 1) {
+            [cell radiusWithRadius:10 corner:UIRectCornerBottomLeft|UIRectCornerBottomRight];
+        } else {
+            [cell radiusWithRadius:0 corner:UIRectCornerBottomLeft|UIRectCornerBottomRight];
+        }
+    }
+    
 }
 
 @end

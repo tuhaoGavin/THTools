@@ -37,6 +37,14 @@ typedef struct {
     self.layer.mask = shapeLayer;
 }
 
+- (void)radiusWithRadius:(CGFloat)radius corner:(UIRectCorner)corner {
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(radius, radius)];
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = self.bounds;
+    maskLayer.path = path.CGPath;
+    self.layer.mask = maskLayer;
+}
+
 #pragma mark - Private
 THCornerRadii THCornerRadiiMake(CGFloat topLeft,CGFloat topRight,CGFloat bottomLeft,CGFloat bottomRight) {
     return (THCornerRadii){

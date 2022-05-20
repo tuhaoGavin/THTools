@@ -24,6 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
                    bottomLeft:(CGFloat)bottomLeft
                   bottomRight:(CGFloat)bottomRight;
 
+/**
+ 绘制圆角 避免直接使用cornerRadius触发的离屏渲染销号GPU(该方法需已设置控件的frame,若使用约束布局
+ 需要在约束完成后调用layoutIfNeeded后在调用，或者在layoutsubviews 中调用)
+ @param radius 圆角尺寸
+ @param corner 圆角位置
+ */
+- (void)radiusWithRadius:(CGFloat)radius corner:(UIRectCorner)corner;
+
 @end
 
 NS_ASSUME_NONNULL_END
