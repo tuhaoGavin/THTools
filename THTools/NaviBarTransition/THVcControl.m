@@ -6,8 +6,8 @@
 //
 
 #import "THVcControl.h"
-#if __has_include(<RTRootNavigationController.h>)
-#import <RTRootNavigationController.h>
+#if __has_include(<RTRootNavigationController/RTRootNavigationController.h>)
+#import <RTRootNavigationController/RTRootNavigationController.h>
 #else
 #import "RTRootNavigationController.h"
 #endif
