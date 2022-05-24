@@ -7,6 +7,9 @@
 //
 
 #import "THBaseArchiveModel.h"
+#import <objc/runtime.h>
+
+static const void *InstanceKey = &InstanceKey;
 
 @implementation THBaseArchiveModel
 
@@ -14,31 +17,34 @@ static id instance; // 单例（全局变量）
 
 /** 单例方法 */
 + (instancetype)shared {
-    // 使用GCD确保只进行一次
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        // 先从归档的文件里面去拿,拿不到,再初始化一个空的对象
-        instance = [[self class] unarchive];
-        if (!instance) {
-            instance = [[[self class] alloc]init];
-        }
-    });
-    return instance;
-}
-
-/** alloc 会调用allocWithZone方法 */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    // 使用GCD确保只进行一次
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        instance = [super allocWithZone:zone];
-    });
-    return instance;
-}
-
-/** copy在底层 会调用copyWithZone方法 */
-- (id)copyWithZone:(struct _NSZone *)zone {
+/** 这样声明的单例不能被继承，否则会出错 */
+//    // 使用GCD确保只进行一次
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        instance = [self unarchive];
+//    });
+//    return instance;
     
+    @synchronized (self) {
+        instance = objc_getAssociatedObject(self, InstanceKey);
+        if (!instance) {
+            instance = [self unarchive];
+        }
+    }
+    return instance;
+}
+
+///** alloc 会调用allocWithZone方法 .h中直接废弃init和new方法，可不重写*/
+//+ (instancetype)allocWithZone:(struct _NSZone *)zone {
+//    // 使用GCD确保只进行一次
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        instance = [super allocWithZone:zone];
+//    });
+//}
+
+///** copy在底层 会调用copyWithZone方法 */
+- (id)copyWithZone:(struct _NSZone *)zone {
     return instance;
 }
 
@@ -60,13 +66,18 @@ static id instance; // 单例（全局变量）
 // 因为在解档的时候,还没有任何的model实例.所以写成类方法,并把解档的对象返回
 // 在model创建的时候调用
 + (instancetype)unarchive {
-    return [NSKeyedUnarchiver unarchiveObjectWithFile:[[self class] archivePath]];
+    id obj = [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePath]];
+    if (!obj) {
+        obj = [[super allocWithZone:NULL] init];
+    }
+    objc_setAssociatedObject(self, InstanceKey, obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    return obj;
 }
 
 #pragma mark - 接口方法
 /** 归档 */
 - (void)archive {
-    [NSKeyedArchiver archiveRootObject:self toFile:[[self class] archivePath]];
+    [NSKeyedArchiver archiveRootObject:[self.class shared] toFile:[[self class] archivePath]];
 }
 
 /** 删除归档数据 */
