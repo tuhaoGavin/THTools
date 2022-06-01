@@ -38,6 +38,12 @@ typedef NS_ENUM(NSUInteger, WXBResponseType) {
     // 特殊情况下，一转换服务器就无法识别的，默认会尝试转换成JSON，若失败则需要自己去转换
     kWXBResponseTypeData = 3
 };
+//上传数据类型
+typedef NS_ENUM(NSInteger, THUploadType) {
+    THUploadTypeTxt, //文本
+    THUploadTypeImage, //图片
+    THUploadTypeVideo, //视频
+};
 /**
  *  下载进度
  *
@@ -57,7 +63,19 @@ typedef WXBDownloadProgress WXBPostProgress;
 typedef void (^WXBUploadProgress)(int64_t bytesWritten,
                                   int64_t totalBytesWritten);
 
+@interface THUploadModel : NSObject
+/// 文件在表单中的key
+@property (nonatomic, copy) NSString *keyName;
+/// 上传数据类型
+@property (nonatomic, assign) THUploadType type;
+/// 上传数据
+@property (nonatomic, strong) NSData * data;
+/// 上传图片 (上传图片时可赋值image也可赋值data)
+@property (nonnull, strong) UIImage * image;
 
+- (instancetype)initWithType:(THUploadType)type;
+
+@end
 
 
 
@@ -165,6 +183,14 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
                                 progress:(WXBUploadProgress)progress
                                  success:(SuccessBlock)success
                                     fail:(FailureBlock)fail;
+
++ (WXBURLSessionTask *)submitFormWithURL:(NSString *)url
+                                  params:(NSDictionary *)params
+                                 headers:(NSDictionary *)headers
+                            uploadFiles:(NSArray <THUploadModel *>*)uploadFiles
+                                progress:(WXBUploadProgress)progress
+                                 success:(SuccessBlock)success
+                                 failure:(FailureBlock)failure;
 /**
  *  下载文件
  *

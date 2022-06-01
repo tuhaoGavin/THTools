@@ -27,6 +27,9 @@
 /// @param preTittle 倒计时过程中前缀title
 /// @param sufTitle 倒计时过程中后缀title
 /// @param disEnableWhenCountDown 倒计时过程中是否禁用
--(void)th_startMMSSTime:(NSInteger)timeout title:(NSString *)tittle waitPreTittle:(NSString *)preTittle waitSufTitle:(NSString *)sufTitle disEnableWhenCountDown:(BOOL)disEnableWhenCountDown;
+- (void)th_startMMSSTime:(NSInteger)timeout title:(NSString *)tittle waitPreTittle:(NSString *)preTittle waitSufTitle:(NSString *)sufTitle disEnableWhenCountDown:(BOOL)disEnableWhenCountDown;
+
+
+- (void)th_endCountDown;
 
 @end

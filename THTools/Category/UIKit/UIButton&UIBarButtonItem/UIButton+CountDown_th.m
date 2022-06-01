@@ -85,6 +85,15 @@
     dispatch_resume(self.countDownTimer);
 }
 
+- (void)th_endCountDown {
+    if (self.isCountDown) {
+        dispatch_source_cancel(self.countDownTimer);
+        self.countDownTimer = nil;
+        self.enabled = YES;
+        self.isCountDown = NO;
+    }
+}
+
 -(BOOL)isCountDown {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }

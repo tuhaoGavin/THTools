@@ -34,7 +34,7 @@
 
 - (void)th_initialize {
     //处理刷新闪动问题
-    self.estimatedRowHeight = 0;
+//    self.estimatedRowHeight = 0;
     //处理设置sectionHeaderHeight与sectionFooterHeight不生效问题
     self.estimatedSectionHeaderHeight = 0;
     self.estimatedSectionFooterHeight = 0;

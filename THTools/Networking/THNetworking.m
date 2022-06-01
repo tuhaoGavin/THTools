@@ -11,6 +11,14 @@
 #import <CommonCrypto/CommonDigest.h>
 NSString *const THNetworkStatus = @"networkStatus";
 
+@implementation THUploadModel
+- (instancetype)initWithType:(THUploadType)type {
+    if (self = [super init]) {
+        self.type = type;
+    }
+    return self;
+}
+@end
 
 @interface NSString (md5)
 
@@ -510,17 +518,7 @@ static inline NSString *cachePath() {
             NSString *str=[formatter stringFromDate:[NSDate date]];
             NSString *fileName=[NSString stringWithFormat:@"%@.png",str];
             UIImage *image = photos[i];
-            NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
-            //压缩图片
-            if (imageData.length>100*1024) {
-                if (imageData.length>1024*1024) {//1M以及以上
-                    imageData = UIImageJPEGRepresentation(image, 0.1f);
-                }else if (imageData.length>512*1024) {//0.5M-1M
-                    imageData = UIImageJPEGRepresentation(image, 0.2f);
-                }else if (imageData.length>200*1024) {//0.25M-0.5M
-                    imageData = UIImageJPEGRepresentation(image, 0.3f);
-                }
-            }
+            NSData *imageData = [self compressImageToData:image];
             [formData appendPartWithFileData:imageData name:[NSString stringWithFormat:@"upload%d",i+1] fileName:fileName mimeType:@"image/jpeg"];
         }
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -672,6 +670,84 @@ static inline NSString *cachePath() {
         [[self allTasks] addObject:session];
     }
     
+    return session;
+}
+
++ (WXBURLSessionTask *)submitFormWithURL:(NSString *)url
+                                  params:(NSDictionary *)params
+                                 headers:(NSDictionary *)headers
+                            uploadFiles:(NSArray <THUploadModel *>*)uploadFiles
+                                progress:(WXBUploadProgress)progress
+                                 success:(SuccessBlock)success
+                                 failure:(FailureBlock)failure
+{
+    if ([self baseUrl] == nil) {
+        if ([NSURL URLWithString:url] == nil) {
+            WXBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+            return nil;
+        }
+    } else {
+        if ([NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [self baseUrl], url]] == nil) {
+            WXBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+            return nil;
+        }
+    }
+    
+    if ([self shouldEncode]) {
+        url = [self encodeUrl:url];
+    }
+    
+    NSString *absolute = [self absoluteUrlWithPath:url];
+    
+    AFHTTPSessionManager *manager = [self manager];
+    manager.requestSerializer.timeoutInterval = 60.0f;
+    WXBURLSessionTask *session = [manager POST:url parameters:params headers:headers constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        if (uploadFiles) {
+            [uploadFiles enumerateObjectsUsingBlock:^(THUploadModel * _Nonnull uploadModel, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSString * formKeyName = uploadModel.keyName ? : [NSString stringWithFormat:@"file%ld", idx+1];
+                NSData * fileData = uploadModel.image ? [self compressImageToData:uploadModel.image] : uploadModel.data;
+                if (fileData) {
+                    switch (uploadModel.type) {
+                        case THUploadTypeTxt:
+                            [formData appendPartWithFileData:fileData name:formKeyName fileName:@"file.txt" mimeType:@"text/txt"];
+                            break;
+                        case THUploadTypeImage:
+                            [formData appendPartWithFileData:fileData name:formKeyName fileName:@"file.jpg" mimeType:@"image/jpeg"];
+                            break;
+                        case THUploadTypeVideo:
+                            [formData appendPartWithFileData:fileData name:formKeyName fileName:@"file.mp4" mimeType:@"video/quicktime"];
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }];
+        }
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) {
+            progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [[self allTasks] removeObject:task];
+        [self successResponse:responseObject callback:success];
+        
+        if ([self isDebug]) {
+            [self logWithSuccessResponse:responseObject
+                                     url:absolute
+                                  params:params];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [[self allTasks] removeObject:task];
+        [self handleCallbackWithError:error fail:failure];
+        if ([self isDebug]) {
+            [self logWithFailError:error url:absolute params:nil];
+        }
+    }];
+    [session resume];
+    if (session) {
+        [[self allTasks] addObject:session];
+    }
     return session;
 }
 
@@ -1057,6 +1133,22 @@ static inline NSString *cachePath() {
     //3.开始监听
     [manager startMonitoring];
 }
+
++ (NSData *)compressImageToData:(UIImage *)img {
+    // UIImageJPEGRepresentation第二个参数为压缩比率
+    NSData *data=UIImageJPEGRepresentation(img, 1.0);
+    if (data.length>100*1024) {
+        if (data.length>1024*1024) {//1M以及以上
+            data=UIImageJPEGRepresentation(img, 0.1);
+        }else if (data.length>512*1024) {//0.5M-1M
+            data=UIImageJPEGRepresentation(img, 0.5);
+        }else if (data.length>200*1024) {//0.25M-0.5M
+            data=UIImageJPEGRepresentation(img, 0.9);
+        }
+    }
+    return data;
+}
+
 static inline void alertSureInfo(NSString *content) {
     [[UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController dismissViewControllerAnimated:YES completion:nil];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:content preferredStyle:UIAlertControllerStyleAlert];
