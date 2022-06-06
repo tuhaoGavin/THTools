@@ -880,6 +880,11 @@ static inline NSString *cachePath() {
     manager.requestSerializer.timeoutInterval = sg_timeoutInterval;
     
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    
+    AFSecurityPolicy * securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
+    manager.securityPolicy = securityPolicy;
     return manager;
 }
 
