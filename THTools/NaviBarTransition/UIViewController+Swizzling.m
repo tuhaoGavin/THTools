@@ -40,7 +40,8 @@
 - (void)swizzling_viewDidLoad {
     self.defaultAlphaForNaviBar = 1.0;
     NSString * className = NSStringFromClass(self.class);
-    if (![className containsString:@"UI"]) {
+    if (![className containsString:@"UI"] &&
+        ![className containsString:@"PU"]) {
         if (!self.view.backgroundColor) {
             self.view.backgroundColor = [UIColor whiteColor];
         }
