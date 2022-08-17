@@ -36,7 +36,7 @@
     objc_setAssociatedObject(self, @selector(barAlpha), @(barAlpha), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     UIColor * color = self.barTintColor ? self.barTintColor : UIColor.whiteColor;
-    if (@available(iOS 15.0, *)) {
+    if (@available(iOS 13.0, *)) {
         UINavigationBarAppearance *barApp = self.standardAppearance ?: [UINavigationBarAppearance new];
         [barApp setBackgroundImage:[UIImage th_imageWithColor:[color colorWithAlphaComponent:barAlpha]]];
         [barApp setShadowColor:nil];

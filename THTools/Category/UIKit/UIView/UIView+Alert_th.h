@@ -25,7 +25,7 @@
 #pragma mark - hide
 
 // this will judge and call right method
-- (void)hideView;
+- (void)hideTheView;
 
 - (void)hideInWindow;
 

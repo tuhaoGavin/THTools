@@ -265,7 +265,7 @@
     return NO;
 }
 
-- (void)hideView
+- (void)hideTheView
 {
     if ([self isShowInWindow]) {
         [self hideInWindow];

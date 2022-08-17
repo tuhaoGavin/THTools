@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 是否使用透明的导航栏 */
 @property (nonatomic, assign) BOOL isUseClearBar;
 
+/** 返回按钮名称 */
+@property (nonatomic, strong) NSString * backImgName;
+
 /** 设置导航栏alpha值 */
 - (void)setAlphaForNaviBar:(CGFloat)alpha;
 
