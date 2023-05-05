@@ -87,6 +87,22 @@ static NSInteger sg_numberOfTimesToRetry = 3;
 static NSTimeInterval sg_timeoutInterval = 15.0f;
 static NSMutableDictionary *sg_timesOfRetryURLs;
 
+/**
+ *  网络请求方式
+ */
+typedef NS_ENUM(NSInteger,THNetRequestMethod) {
+    /** Get */
+    THNetRequestMethodGet = 1,
+    /** Post */
+    THNetRequestMethodPost = 2,
+    /** Delete */
+    THNetRequestMethodDelete = 3,
+    /** Put */
+    THNetRequestMethodPut = 4,
+    /** Patch */
+    THNetRequestMethodPatch = 5,
+};
+
 @implementation THNetworking
 
 + (void)cacheGetRequest:(BOOL)isCacheGet shoulCachePost:(BOOL)shouldCachePost {
@@ -271,7 +287,7 @@ static inline NSString *cachePath() {
                              fail:(FailureBlock)fail {
     return [self _requestWithUrl:url
                     refreshCache:refreshCache
-                       httpMedth:1
+                       httpMedth:THNetRequestMethodGet
                           params:params
                          headers:headers
                         progress:progress
@@ -302,7 +318,7 @@ static inline NSString *cachePath() {
                               fail:(FailureBlock)fail {
     return [self _requestWithUrl:url
                     refreshCache:refreshCache
-                       httpMedth:2
+                       httpMedth:THNetRequestMethodPost
                           params:params
                          headers:headers
                         progress:progress
@@ -310,9 +326,42 @@ static inline NSString *cachePath() {
                             fail:fail];
 }
 
++ (WXBURLSessionTask *)deleteWithUrl:(NSString *)url params:(NSDictionary *)params success:(SuccessBlock)success fail:(FailureBlock)fail {
+    return [self _requestWithUrl:url
+                    refreshCache:YES
+                       httpMedth:THNetRequestMethodDelete
+                          params:params
+                         headers:nil
+                        progress:nil
+                         success:success
+                            fail:fail];
+}
+
++ (WXBURLSessionTask *)putWithUrl:(NSString *)url params:(NSDictionary *)params success:(SuccessBlock)success fail:(FailureBlock)fail {
+    return [self _requestWithUrl:url
+                    refreshCache:YES
+                       httpMedth:THNetRequestMethodPut
+                          params:params
+                         headers:nil
+                        progress:nil
+                         success:success
+                            fail:fail];
+}
+
++ (WXBURLSessionTask *)patchWithUrl:(NSString *)url params:(NSDictionary *)params success:(SuccessBlock)success fail:(FailureBlock)fail {
+    return [self _requestWithUrl:url
+                    refreshCache:YES
+                       httpMedth:THNetRequestMethodPatch
+                          params:params
+                         headers:nil
+                        progress:nil
+                         success:success
+                            fail:fail];
+}
+
 + (WXBURLSessionTask *)_requestWithUrl:(NSString *)url
                           refreshCache:(BOOL)refreshCache
-                             httpMedth:(NSUInteger)httpMethod
+                             httpMedth:(THNetRequestMethod)httpMethod
                                 params:(NSDictionary *)params
                                headers:(NSDictionary *)headers
                               progress:(WXBDownloadProgress)progress
@@ -345,7 +394,7 @@ static inline NSString *cachePath() {
     
     WXBURLSessionTask *session = nil;
     
-    if (httpMethod == 1) {
+    if (httpMethod == THNetRequestMethodGet) {
         if (sg_cacheGet && !refreshCache) {// 获取缓存
             id response = [[self class] cahceResponseWithURL:absolute
                                                    parameters:params];
@@ -403,7 +452,7 @@ static inline NSString *cachePath() {
                 [self logWithFailError:error url:absolute params:params];
             }
         }];
-    } else if (httpMethod == 2) {
+    } else if (httpMethod == THNetRequestMethodPost) {
         if (sg_cachePost && !refreshCache) {// 获取缓存
             id response = [[self class] cahceResponseWithURL:absolute
                                                    parameters:params];
@@ -459,6 +508,48 @@ static inline NSString *cachePath() {
             
             [self handleCallbackWithError:error fail:fail];
             
+            if ([self isDebug]) {
+                [self logWithFailError:error url:absolute params:params];
+            }
+        }];
+    } else if (httpMethod == THNetRequestMethodDelete) {
+        session = [manager DELETE:url parameters:params headers:headers success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [self successResponse:responseObject callback:success];
+            if ([self isDebug]) {
+                [self logWithSuccessResponse:responseObject
+                                         url:absolute
+                                      params:params];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [self handleCallbackWithError:error fail:fail];
+            if ([self isDebug]) {
+                [self logWithFailError:error url:absolute params:params];
+            }
+        }];
+    } else if (httpMethod == THNetRequestMethodPut) {
+        session = [manager PUT:url parameters:params headers:headers success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [self successResponse:responseObject callback:success];
+            if ([self isDebug]) {
+                [self logWithSuccessResponse:responseObject
+                                         url:absolute
+                                      params:params];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [self handleCallbackWithError:error fail:fail];
+            if ([self isDebug]) {
+                [self logWithFailError:error url:absolute params:params];
+            }
+        }];
+    } else if (httpMethod == THNetRequestMethodPatch) {
+        session = [manager PATCH:url parameters:params headers:headers success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [self successResponse:responseObject callback:success];
+            if ([self isDebug]) {
+                [self logWithSuccessResponse:responseObject
+                                         url:absolute
+                                      params:params];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [self handleCallbackWithError:error fail:fail];
             if ([self isDebug]) {
                 [self logWithFailError:error url:absolute params:params];
             }
@@ -578,7 +669,7 @@ static inline NSString *cachePath() {
     NSString *absolute = [self absoluteUrlWithPath:url];
     
     AFHTTPSessionManager *manager = [self manager];
-    manager.requestSerializer.timeoutInterval = 60.0f;
+    manager.requestSerializer.timeoutInterval = MAX(sg_timeoutInterval, 60.f);
     WXBURLSessionTask *session = [manager POST:url parameters:params headers:headers constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:data name:@"dataFile" fileName:@"video.mp4" mimeType:@".mp4"];
         
@@ -700,7 +791,7 @@ static inline NSString *cachePath() {
     NSString *absolute = [self absoluteUrlWithPath:url];
     
     AFHTTPSessionManager *manager = [self manager];
-    manager.requestSerializer.timeoutInterval = 60.0f;
+    manager.requestSerializer.timeoutInterval = MAX(sg_timeoutInterval, 60.f);
     WXBURLSessionTask *session = [manager POST:url parameters:params headers:headers constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         if (uploadFiles) {
             [uploadFiles enumerateObjectsUsingBlock:^(THUploadModel * _Nonnull uploadModel, NSUInteger idx, BOOL * _Nonnull stop) {
