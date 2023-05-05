@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "THTools"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "OC常用工具"
 
   # This description is used to generate tags and improve search results.
