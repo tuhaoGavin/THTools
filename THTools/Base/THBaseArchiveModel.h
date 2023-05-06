@@ -14,6 +14,6 @@
 - (void)archive;
 - (void)deleteData;
 
-- (instancetype)init __attribute__((deprecated));
-+ (instancetype)new NS_UNAVAILABLE;
+//- (instancetype)init __attribute__((deprecated));
+//+ (instancetype)new NS_UNAVAILABLE;
 @end
