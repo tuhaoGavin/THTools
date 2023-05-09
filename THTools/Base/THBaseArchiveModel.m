@@ -34,10 +34,15 @@ static id instance; // 单例（全局变量）
     return instance;
 }
 
-///** alloc 会调用allocWithZone方法 .h中直接废弃init和new方法，可不重写*/
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    return [self shared];
-}
+//** alloc 会调用allocWithZone方法 .h中直接废弃init和new方法，可不重写
+//   这里只是对init方法__attribute__((deprecated))作警告废弃处理 没有重写是因为该类中unarchiveObjectWithFile底层会调用alloc方法，会造成无限递归调用，造成APP卡死
+//*/
+//+ (instancetype)allocWithZone:(struct _NSZone *)zone {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        instance = [super allocWithZone:zone];
+//    });
+//}
 
 ///** copy在底层 会调用copyWithZone方法 */
 - (id)copyWithZone:(struct _NSZone *)zone {
