@@ -50,11 +50,15 @@
 }
 
 - (void)swizzling_viewWillAppear:(BOOL)animated {
-    NSLog(@"currentVcIs:%@", self.class);
+    
     if (self.isUseClearBar) {
         [self setAlphaForNaviBar:0];
     } else {
         [self setAlphaForNaviBar:self.defaultAlphaForNaviBar];
+    }
+    if (![NSStringFromClass(self.class) containsString:@"UI"] &&
+        ![NSStringFromClass(self.class) containsString:@"PU"]) {
+        NSLog(@"currentVcIs:%@", self.class);
     }
     [self swizzling_viewWillAppear:animated];
 }

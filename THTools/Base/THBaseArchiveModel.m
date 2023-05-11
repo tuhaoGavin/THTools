@@ -24,25 +24,23 @@ static id instance; // 单例（全局变量）
 //        instance = [self unarchive];
 //    });
 //    return instance;
-    
-    @synchronized (self) {
-        instance = objc_getAssociatedObject(self, InstanceKey);
-        if (!instance) {
-            instance = [self unarchive];
-        }
-    }
+
+    instance = [self unarchive];
     return instance;
 }
 
 //** alloc 会调用allocWithZone方法 .h中直接废弃init和new方法，可不重写
-//   这里只是对init方法__attribute__((deprecated))作警告废弃处理 没有重写是因为该类中unarchiveObjectWithFile底层会调用alloc方法，会造成无限递归调用，造成APP卡死
-//*/
-//+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        instance = [super allocWithZone:zone];
-//    });
-//}
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    /** 可继承单例写法 */
+    @synchronized (self) {
+        instance = objc_getAssociatedObject(self, InstanceKey);
+        if (!instance) {
+            instance = [super allocWithZone:zone];
+            objc_setAssociatedObject(self, InstanceKey, instance, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        }
+    }
+    return instance;
+}
 
 ///** copy在底层 会调用copyWithZone方法 */
 - (id)copyWithZone:(struct _NSZone *)zone {
@@ -69,9 +67,8 @@ static id instance; // 单例（全局变量）
 + (instancetype)unarchive {
     id obj = [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePath]];
     if (!obj) {
-        obj = [[super allocWithZone:NULL] init];
+        obj = [[self alloc] init];
     }
-    objc_setAssociatedObject(self, InstanceKey, obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return obj;
 }
 
