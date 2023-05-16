@@ -8,9 +8,8 @@
 
 #import "THKeychainStore.h"
 #import <UIKit/UIKit.h>
+#import "THDeviceInfoHelper.h"
 //#import <AdSupport/AdSupport.h>
-
-static NSString * const KeyForUUID = @"com.lobochat.Single.usernamepassword";
 
 @implementation THKeychainStore
 + (NSMutableDictionary*)getKeychainQuery:(NSString*)service {
@@ -63,7 +62,7 @@ static NSString * const KeyForUUID = @"com.lobochat.Single.usernamepassword";
 /**  获取UUID*/
 + (NSString *)getUUIDByKeyChain{
     // 这个key的前缀最好是你的BundleID
-    NSString*strUUID = (NSString*)[self load:KeyForUUID];
+    NSString*strUUID = (NSString*)[self load:AppBundleID()];
     //首次执行该方法时，uuid为空
     if([strUUID isEqualToString:@""]|| !strUUID)
     {
@@ -82,7 +81,7 @@ static NSString * const KeyForUUID = @"com.lobochat.Single.usernamepassword";
         strUUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
         
         //将该uuid保存到keychain
-        [self save:KeyForUUID data:strUUID];
+        [self save:AppBundleID() data:strUUID];
     }
     return strUUID;
 }
