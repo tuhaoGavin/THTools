@@ -16,6 +16,7 @@
     dispatch_once(&onceToken, ^{
         swizzling_exchangeMethod([UITableView class], @selector(initWithFrame:style:), @selector(swizzling_initWithFrame:style:));
         swizzling_exchangeMethod([UITableView class], @selector(initWithCoder:), @selector(swizzling_initWithCoder:));
+        swizzling_exchangeMethod([UITableView class], @selector(layoutSubviews), @selector(swizzling_layoutSubviews));
     });
 }
 
@@ -40,6 +41,12 @@
     self.estimatedSectionFooterHeight = 0;
     if (@available(iOS 15.0, *)) {
         self.sectionHeaderTopPadding = 0;
+    }
+}
+
+- (void)swizzling_layoutSubviews {
+    if (self.superview.window) {
+        [self swizzling_layoutSubviews];
     }
 }
 
