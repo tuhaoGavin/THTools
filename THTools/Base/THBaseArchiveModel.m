@@ -25,7 +25,12 @@ static id instance; // 单例（全局变量）
 //    });
 //    return instance;
 
-    instance = [self unarchive];
+    @synchronized (self) {
+        instance = objc_getAssociatedObject(self, InstanceKey);
+        if (!instance) {
+            instance = [self unarchive];
+        }
+    }
     return instance;
 }
 
