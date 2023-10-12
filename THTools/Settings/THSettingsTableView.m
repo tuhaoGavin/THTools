@@ -11,6 +11,7 @@
 #import "THSettingsModel.h"
 #import "THSettingsTimeRangView.h"
 #import "UIView+Alert_th.h"
+#import "THAppMacro.h"
 
 @interface THSettingsTableView ()
 

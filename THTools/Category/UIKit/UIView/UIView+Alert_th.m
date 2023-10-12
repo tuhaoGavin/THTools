@@ -8,6 +8,7 @@
 
 #import "UIView+Alert_th.h"
 #import "UIView+AutoLayout_th.h"
+#import "THAppMacro.h"
 
 @interface THShowAlertView : UIView
 

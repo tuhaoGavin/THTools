@@ -8,6 +8,7 @@
 
 #import "UIControl+Sound_th.h"
 #import <objc/runtime.h>
+#import "THAppMacro.h"
 
 // Key for the dictionary of sounds for control events.
 static char const * const th_kSoundsKey = "th_kSoundsKey";

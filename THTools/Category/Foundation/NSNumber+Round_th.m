@@ -7,6 +7,7 @@
 //
 
 #import "NSNumber+Round_th.h"
+#import "THAppMacro.h"
 
 @implementation NSNumber (Round_th)
 

@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+JSON_th.h"
+#import "THAppMacro.h"
 
 @implementation NSDictionary (JSON_th)
 

@@ -7,6 +7,7 @@
 //
 
 #import "NSString+Dictionary_th.h"
+#import "THAppMacro.h"
 
 @implementation NSString (Dictionary_th)
 

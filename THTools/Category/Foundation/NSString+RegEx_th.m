@@ -7,6 +7,7 @@
 //
 
 #import "NSString+RegEx_th.h"
+#import "THAppMacro.h"
 
 @implementation NSString (RegEx_th)
 

@@ -9,6 +9,7 @@
 #import "THKeychainStore.h"
 #import <UIKit/UIKit.h>
 #import "THDeviceInfoHelper.h"
+#import "THAppMacro.h"
 //#import <AdSupport/AdSupport.h>
 
 @implementation THKeychainStore

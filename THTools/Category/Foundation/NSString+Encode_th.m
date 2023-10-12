@@ -10,6 +10,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 #import <UIKit/UIKit.h>
+#import "THAppMacro.h"
 
 @implementation NSString (Encode_th)
 

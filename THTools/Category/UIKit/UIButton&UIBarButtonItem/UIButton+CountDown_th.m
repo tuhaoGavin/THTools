@@ -39,7 +39,6 @@
             NSString *strTime = [NSString stringWithFormat:@"%.2ld", (long)timeOut];
             dispatch_async(dispatch_get_main_queue(), ^{
                 //设置界面的按钮显示 根据自己需求设置
-//                NSLog(@"____%@",strTime);
                 [self setTitle:[NSString stringWithFormat:@"%@%@%@", preTittle, strTime, sufTitle] forState:UIControlStateNormal];
                 self.enabled = disEnableWhenCountDown ? NO : YES;
                 self.isCountDown = YES;
@@ -73,7 +72,6 @@
             NSString *strTime = [NSString stringWithFormat:@"%.2ld", (long)timeOut];
             dispatch_async(dispatch_get_main_queue(), ^{
                 //设置界面的按钮显示 根据自己需求设置
-//                NSLog(@"____%@",strTime);
                 [self setTitle:[NSString stringWithFormat:@"%@%@%@", preTittle, [NSString th_getMMSSFromSS:strTime], sufTitle] forState:UIControlStateNormal];
                 self.enabled = disEnableWhenCountDown ? NO : YES;
                 self.isCountDown = YES;

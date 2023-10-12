@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+JSONString_th.h"
+#import "THAppMacro.h"
 
 @implementation NSDictionary (JSONString_th)
 

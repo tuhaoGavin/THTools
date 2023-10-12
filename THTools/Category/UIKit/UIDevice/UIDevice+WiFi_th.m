@@ -7,6 +7,7 @@
 //
 
 #import "UIDevice+WiFi_th.h"
+#import "THAppMacro.h"
 #import <SystemConfiguration/CaptiveNetwork.h>//获取WiFi信息
 #import <arpa/inet.h>//网关
 #import <netinet/in.h>//网关

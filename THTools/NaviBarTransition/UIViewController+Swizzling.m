@@ -9,6 +9,7 @@
 #import "UIViewController+Swizzling.h"
 #import "SwizzlingDefine.h"
 #import "UINavigationBar+Alpha.h"
+#import "THAppMacro.h"
 
 @interface UIViewController ()
 @property (nonatomic, assign) CGFloat defaultAlphaForNaviBar; //Navibar默认透明度

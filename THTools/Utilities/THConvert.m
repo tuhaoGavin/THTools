@@ -8,6 +8,7 @@
 //
 
 #import "THConvert.h"
+#import "THAppMacro.h"
 
 @interface THConvert ()
 

@@ -22,10 +22,6 @@
 
 @implementation THAlertView
 
--(void)dealloc {
-    NSLog(@"alertViewDealloc");
-}
-
 + (instancetype)alertWithWidth:(CGFloat)width height:(CGFloat)height position:(THAlertViewPosition)position {
     return [[self alloc] initWithWidth:width height:height position:position];
 }

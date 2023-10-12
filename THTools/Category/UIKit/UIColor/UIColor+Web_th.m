@@ -7,6 +7,7 @@
 //
 
 #import "UIColor+Web_th.h"
+#import "THAppMacro.h"
 
 @implementation UIColor (Web_th)
 

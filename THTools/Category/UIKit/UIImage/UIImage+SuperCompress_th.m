@@ -7,6 +7,7 @@
 //
 
 #import "UIImage+SuperCompress_th.h"
+#import "THAppMacro.h"
 
 @implementation UIImage (SuperCompress_th)
 
