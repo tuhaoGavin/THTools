@@ -31,16 +31,11 @@
 #define kNSUserDefaults [NSUserDefaults standardUserDefaults]
 
 /**************************************Log***************************************/
-//自定义高效率的NSLog
+// 自定义log
 #ifdef DEBUG
-#define NSLog(format, ...) do { \
-fprintf(stderr, "<%s : 第%d行> %s\n", \
-[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], \
-__LINE__, __func__);\
-(NSLog)((format), ##__VA_ARGS__);\
-} while (0)
+#define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
 #else
-#define NSLog(...)
+#define NSLog(format, ...)
 #endif
 
 //debug输出rect，size和point的宏
