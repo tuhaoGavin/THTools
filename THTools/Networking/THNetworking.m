@@ -7,7 +7,6 @@
 //
 
 #import "THNetworking.h"
-#import "THAppMacro.h"
 
 #import <CommonCrypto/CommonDigest.h>
 NSString *const THNetworkStatus = @"networkStatus";

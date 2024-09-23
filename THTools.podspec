@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "THTools"
-  spec.version      = "1.0.7"
+  spec.version      = "1.0.8"
   spec.summary      = "OC常用工具"
 
   # This description is used to generate tags and improve search results.
@@ -99,10 +99,12 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'Core' do |ss|
   ss.frameworks = 'UIKit','Foundation'
-  ss.source_files = 'THTools/**/*.{h,m}'
-  ss.exclude_files = 'THTools/NaviBarTransition/*.{h,m}'
   ss.dependency 'Masonry'
-  ss.dependency 'AFNetworking', '~> 4.0'
+  ss.source_files = 'THTools/**/*.{h,m}'
+  ss.exclude_files = [
+    'THTools/NaviBarTransition/*.{h,m}',
+    'THTools/THNetworking/*.{h,m}'
+  ]
   #ss.resource = 'THTools/Settings/THResource.bundle'
   ss.resource_bundles = {
     'THResource' => ['THTools/Settings/THResource.bundle']
@@ -113,6 +115,11 @@ Pod::Spec.new do |spec|
   ss.source_files = 'THTools/NaviBarTransition/*.{h,m}'
   ss.dependency 'THTools/Core'
   ss.dependency 'RTRootNavigationController'
+  end
+
+  spec.subspec 'THNetworking' do |ss|
+  ss.source_files = 'THTools/THNetworking/*.{h,m}'
+  ss.dependency 'AFNetworking', '~> 4.0'
   end
   
 

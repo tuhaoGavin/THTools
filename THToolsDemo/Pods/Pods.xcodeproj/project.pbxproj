@@ -22,6 +22,7 @@
 		08F94D83046D101553095345F1E485CE /* THWeakWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0150B6653E5352067B2E7696A90970FD /* THWeakWrapper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0F9C158916D93D4FAF7055DC09A89D40 /* UIImage+Orientation_th.h in Headers */ = {isa = PBXBuildFile; fileRef = 278C83DEC7EBDCC3B35DF7AEBE5C0667 /* UIImage+Orientation_th.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0FF809ADF3E938FE9F05B1D2970CAD5A /* UIView+Radius_th.h in Headers */ = {isa = PBXBuildFile; fileRef = A83F3BD090A488119160CFB25A6AE9BE /* UIView+Radius_th.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		110A44BB2CA13C58000B6D8C /* THNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 110A44BA2CA13C58000B6D8C /* THNetworking.m */; };
 		116A271C01D78A3FB5FDE3A8B64BB625 /* UIView+Alert_th.m in Sources */ = {isa = PBXBuildFile; fileRef = 018C31E658226F16BCF002D6558967DA /* UIView+Alert_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		125EE8724960658F5CAF0EDED00C383E /* UIView+Border_th.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5AD4F25212675C7D621FF1B2506B24 /* UIView+Border_th.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1268A5B86AE443646D740163091F2F39 /* NSString+Size_th.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A499BEFBE5A8655FC30B8742D75429A /* NSString+Size_th.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -93,7 +94,6 @@
 		4563374304C6A77B6333EA9C74802F23 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2300915C058CA60B4EA7A9D349722A /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		468DB5E17D871BB06F8E15B3B6C1126D /* NSString+Emoji_th.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BF9D274600FE9373933CBDFFA34331 /* NSString+Emoji_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		46C5AADE24C9A3F242FBBAE8B1A86081 /* THSandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A9D21C4F0EE3E69A7C3ED5ABB71BE0A /* THSandbox.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4700DA464DFDD9A129CF2575F0DFFAF7 /* THNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A755EF478C0AB95F3B5EDD11E10E07 /* THNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		49118D2887FF6B60D8280EF05CECE91C /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEAD39ACBD1C50C238A37A419616C1 /* UIButton+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4A19F5D286F5D68009C15CD8FE298233 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1118573977551A9F0107BE0C7B29C /* AFSecurityPolicy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4A7438E405FE489444E9548BE483DE09 /* UIDevice+Hardware_th.m in Sources */ = {isa = PBXBuildFile; fileRef = 8995FFF8A8FECCCBE743CDE076BA9025 /* UIDevice+Hardware_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -309,7 +309,6 @@
 		E62988AC691CDB47A42C126D090BF69A /* THSettingsTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD057D7D4394528DBCB7E9A8E1A6BB0 /* THSettingsTableDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E64C693323687ACFF1A07C68553A08DD /* NSObject+Unicode_th.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BFCF0395FC6836149686202EF6A178 /* NSObject+Unicode_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E9671718C1F77C0447604AD997421145 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 531500C5409C3D1045492BB39474469F /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E98BA6344B7833AAA36CB9F1A6FCAA58 /* THNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B592F7DD8A8BA29FE9B3C9B112E08D /* THNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E9FF66720AE569E0950F6D188FD464EE /* UILabel+Chain.h in Headers */ = {isa = PBXBuildFile; fileRef = AF979DF6683396ECABD45C56FCF3DA53 /* UILabel+Chain.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EA053A9ECDE6B216E2D7000132C91B4F /* SwizzlingDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = F232D8CFFCD06FC212B6E66D1C9187A8 /* SwizzlingDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EA77791C0C59E150FF4B810011FABC46 /* UIButton+Indicator_th.m in Sources */ = {isa = PBXBuildFile; fileRef = 26293D151899D78E48C1545E29DC2BE1 /* UIButton+Indicator_th.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -410,6 +409,8 @@
 		0E48513B706EF23581CC6570611903F7 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		0EC3EB99C0B35758708535978D08C2E1 /* NSDate+Utilities_th.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities_th.m"; sourceTree = "<group>"; };
 		0F4781865DE1417423FD37A80B42AAC2 /* UIColor+Random_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random_th.h"; sourceTree = "<group>"; };
+		110A44B92CA13C58000B6D8C /* THNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THNetworking.h; path = THTools/Networking/THNetworking.h; sourceTree = "<group>"; };
+		110A44BA2CA13C58000B6D8C /* THNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THNetworking.m; path = THTools/Networking/THNetworking.m; sourceTree = "<group>"; };
 		113504DB0238F27574685C51A5D5F7E3 /* THAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = THAlertView.h; sourceTree = "<group>"; };
 		11E14C6D3ECBDF9FE9CE5E3A0A272969 /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
 		11E5112D19D2A1B6AA7FF268BE128B42 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
@@ -465,7 +466,6 @@
 		365BF47CB22FB5F7970942C27C38335D /* NSString+URLEncode_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode_th.h"; sourceTree = "<group>"; };
 		3678B435779E4CDD084B9A1E55DE39B5 /* UILabel+AutoSize_th.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AutoSize_th.m"; sourceTree = "<group>"; };
 		36905EDB180DA49721C0FE50CE64214A /* UIButton+Chain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chain.h"; sourceTree = "<group>"; };
-		36A755EF478C0AB95F3B5EDD11E10E07 /* THNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = THNetworking.m; sourceTree = "<group>"; };
 		372153813C4E7E28FA924F0A532C991B /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		386344325045802D5F219C8DE66BFCD8 /* NSBundle+AppIcon_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+AppIcon_th.h"; sourceTree = "<group>"; };
 		386DFE3E0A9E9ABF016A4B72729D5AA6 /* THDeviceInfoHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = THDeviceInfoHelper.h; sourceTree = "<group>"; };
@@ -509,7 +509,6 @@
 		4DD6B0B91B7626066E6EB1144E441EA4 /* THTools-THResource */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "THTools-THResource"; path = THResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9A038D810A762F1B296D17E88316B1 /* NSURL+Param_th.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Param_th.m"; sourceTree = "<group>"; };
 		4FC4702487A3C4D248F2AB06FE9A27B5 /* NSDictionary+JSONString_th.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONString_th.h"; sourceTree = "<group>"; };
-		52B592F7DD8A8BA29FE9B3C9B112E08D /* THNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = THNetworking.h; sourceTree = "<group>"; };
 		531500C5409C3D1045492BB39474469F /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		53648322807A9FFD4F7539472AD10D6C /* THNaviBarTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THNaviBarTransition.h; path = THTools/NaviBarTransition/THNaviBarTransition.h; sourceTree = "<group>"; };
 		53B15EABA39CBFA960F7204BAD10D80D /* UIViewController+RTRootNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RTRootNavigationController.m"; path = "RTRootNavigationController/Classes/UIViewController+RTRootNavigationController.m"; sourceTree = "<group>"; };
@@ -793,6 +792,15 @@
 			path = THTools/Alert;
 			sourceTree = "<group>";
 		};
+		110A44B82CA13C46000B6D8C /* THNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				110A44B92CA13C58000B6D8C /* THNetworking.h */,
+				110A44BA2CA13C58000B6D8C /* THNetworking.m */,
+			);
+			name = THNetworking;
+			sourceTree = "<group>";
+		};
 		125DC3967A0B0F5B7EBC5938F54BCCF6 /* NaviBarTransition */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,7 +998,6 @@
 				129AF10FB1C434C506004910E765DBA0 /* Base */,
 				4B6E6ECDD847D0932DDBBB599D5D2088 /* Category */,
 				3F692B87831198C27B30C127194CD5CD /* Macro */,
-				D9F781445F8DABCEA3AA0F3B00C7921A /* Networking */,
 				72881658BF48E37A80551CAD1659B604 /* Notification */,
 				9FD9F1434C3208EB69FF468F0F573F7D /* Settings */,
 				1CD9FC29749FF461A625A9C750619F26 /* Utilities */,
@@ -1449,6 +1456,7 @@
 			isa = PBXGroup;
 			children = (
 				29518B8AC2B79AB7032A4ADE95B762EC /* Core */,
+				110A44B82CA13C46000B6D8C /* THNetworking */,
 				125DC3967A0B0F5B7EBC5938F54BCCF6 /* NaviBarTransition */,
 				32769B80C8A090B5FBE55C73ADE7A8E1 /* Pod */,
 				E27CD7136F9F32743FCBDDFCBB8DD811 /* Support Files */,
@@ -1473,16 +1481,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D9F781445F8DABCEA3AA0F3B00C7921A /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				52B592F7DD8A8BA29FE9B3C9B112E08D /* THNetworking.h */,
-				36A755EF478C0AB95F3B5EDD11E10E07 /* THNetworking.m */,
-			);
-			name = Networking;
-			path = THTools/Networking;
 			sourceTree = "<group>";
 		};
 		E27CD7136F9F32743FCBDDFCBB8DD811 /* Support Files */ = {
@@ -1597,7 +1595,6 @@
 				7208FE17B430D5C8D8F29A1E0CCBCC89 /* THLocalNotification.h in Headers */,
 				80675847873F0AB0DD2224E69D4F3399 /* THMacro.h in Headers */,
 				A0ED4CD12E4021EB060C8BBA7E934EE1 /* THNaviBarTransition.h in Headers */,
-				E98BA6344B7833AAA36CB9F1A6FCAA58 /* THNetworking.h in Headers */,
 				F08904E28512BD20CDA2C19407A49776 /* THNotificationMacro.h in Headers */,
 				7CBF255A198A6EF3057CBFC622B9B925 /* THPublic.h in Headers */,
 				D5F0F77CE06C39E4565BACD58780E056 /* THRequestMacro.h in Headers */,
@@ -1987,7 +1984,6 @@
 				507BF296076E49C3C867677C26A3B73D /* THDeviceInfoHelper.m in Sources */,
 				8F2CD1DFC2BAFF5723347783EE83C7D4 /* THKeychainStore.m in Sources */,
 				5FCEF47708D0CC44EA4895489EB35812 /* THLocalNotification.m in Sources */,
-				4700DA464DFDD9A129CF2575F0DFFAF7 /* THNetworking.m in Sources */,
 				F735E512D6C4D192D52376C142B8BA53 /* THPublic.m in Sources */,
 				A470485B7D7EE36294DC9E7047EAE5E3 /* THSandbox.m in Sources */,
 				9DBC893EB8ACEDD3B3FC2A5FDE2C3724 /* THSettingsModel.m in Sources */,
@@ -2071,6 +2067,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110A44BB2CA13C58000B6D8C /* THNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

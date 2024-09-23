@@ -55,12 +55,12 @@
                   indexPath:(nonnull NSIndexPath *)indexPath {
     NSInteger rowsNum = [self numberOfRowsInSection:indexPath.section];
     if (rowsNum == 1) {
-        [cell radiusWithRadius:10 corner:UIRectCornerAllCorners];
+        [cell radiusWithRadius:radius corner:UIRectCornerAllCorners];
     } else {
         if (indexPath.row == 0) {
-            [cell radiusWithRadius:10 corner:UIRectCornerTopLeft|UIRectCornerTopRight];
+            [cell radiusWithRadius:radius corner:UIRectCornerTopLeft|UIRectCornerTopRight];
         } else if (indexPath.row == rowsNum - 1) {
-            [cell radiusWithRadius:10 corner:UIRectCornerBottomLeft|UIRectCornerBottomRight];
+            [cell radiusWithRadius:radius corner:UIRectCornerBottomLeft|UIRectCornerBottomRight];
         } else {
             [cell radiusWithRadius:0 corner:UIRectCornerBottomLeft|UIRectCornerBottomRight];
         }

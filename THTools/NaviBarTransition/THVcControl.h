@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIViewController *)getCurrentVC;
 
++(UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC;
+
 @end
 
 NS_ASSUME_NONNULL_END
