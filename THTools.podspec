@@ -103,7 +103,7 @@ Pod::Spec.new do |spec|
   ss.source_files = 'THTools/**/*.{h,m}'
   ss.exclude_files = [
     'THTools/NaviBarTransition/*.{h,m}',
-    'THTools/THNetworking/*.{h,m}'
+    'THTools/Networking/*.{h,m}'
   ]
   #ss.resource = 'THTools/Settings/THResource.bundle'
   ss.resource_bundles = {
@@ -118,7 +118,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'THNetworking' do |ss|
-  ss.source_files = 'THTools/THNetworking/*.{h,m}'
+  ss.source_files = 'THTools/Networking/*.{h,m}'
   ss.dependency 'AFNetworking', '~> 4.0'
   end
   
