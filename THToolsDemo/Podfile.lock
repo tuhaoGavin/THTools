@@ -18,15 +18,17 @@ PODS:
   - RTRootNavigationController (0.8.0):
     - RTRootNavigationController/Core (= 0.8.0)
   - RTRootNavigationController/Core (0.8.0)
-  - THTools/Core (0.0.3):
-    - AFNetworking (~> 4.0)
+  - THTools/Core (1.0.8):
     - Masonry
-  - THTools/NaviBarTransition (0.0.3):
+  - THTools/NaviBarTransition (1.0.8):
     - RTRootNavigationController
     - THTools/Core
+  - THTools/THNetworking (1.0.8):
+    - AFNetworking (~> 4.0)
 
 DEPENDENCIES:
   - THTools/NaviBarTransition (from `../`)
+  - THTools/THNetworking (from `../`)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -39,11 +41,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   RTRootNavigationController: 36c6301870f0467f89d69f4286795340b537d473
-  THTools: c9ac7cdabb8bdb9b4dd3fa570ccc2ac0f0d94e54
+  THTools: 1f7cda3e105cde2824346e4c153c1df57fa1c5df
 
-PODFILE CHECKSUM: ec91e42ddc1211a78076e5b90dc75341def0981f
+PODFILE CHECKSUM: b1d6a871fb3ba43ee6fac1aee5de8c3e0a588686
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2

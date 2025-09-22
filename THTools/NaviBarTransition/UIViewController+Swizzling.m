@@ -40,12 +40,15 @@
 
 - (void)swizzling_viewDidLoad {
     self.defaultAlphaForNaviBar = 1.0;
-    NSString * className = NSStringFromClass(self.class);
-    if (![className containsString:@"UI"] &&
-        ![className containsString:@"PU"]) {
-        if (!self.view.backgroundColor) {
-            self.view.backgroundColor = [UIColor whiteColor];
-        }
+    // 获取类的 bundle identifier
+    const char *className = class_getName([self class]);
+    NSString *bundleID = [[NSBundle bundleForClass:NSClassFromString([NSString stringWithUTF8String:className])] bundleIdentifier];
+    
+    // 判断是否为系统类（系统类的bundle通常以com.apple开头）
+    BOOL isSystemClass = [bundleID hasPrefix:@"com.apple"];
+    
+    if (!isSystemClass && !self.view.backgroundColor) {
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     [self swizzling_viewDidLoad];
 }
@@ -57,8 +60,10 @@
     } else {
         [self setAlphaForNaviBar:self.defaultAlphaForNaviBar];
     }
-    if (![NSStringFromClass(self.class) containsString:@"UI"] &&
-        ![NSStringFromClass(self.class) containsString:@"PU"]) {
+    const char *className = class_getName([self class]);
+    NSString *bundleID = [[NSBundle bundleForClass:NSClassFromString([NSString stringWithUTF8String:className])] bundleIdentifier];
+    BOOL isSystemClass = [bundleID hasPrefix:@"com.apple"];
+    if (!isSystemClass) {
         NSLog(@"currentVcIs:%@", self.class);
     }
     [self swizzling_viewWillAppear:animated];
